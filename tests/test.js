@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test'
 
-test('Checking Index H1', async ({ page }) => {
+test('Checking Index', async ({ page }) => {
 	await page.goto('/')
 	expect(await page.textContent('h1')).toBe("I'm Elclark, Student and software engineer.")
 })
