@@ -137,7 +137,7 @@
 	.info h1 {
 		font-size: var(--xxlarge);
 		font-weight: var(--bold);
-		margin: 0 0 var(--medium) 0;
+		margin: var(--medium) 0;
 	}
 
 	.info p {
