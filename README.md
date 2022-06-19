@@ -1,7 +1,7 @@
 # Elclark
 
-![Cloudflare Pages](https://img.shields.io/github/deployments/ElclarkCodes/Elclark/production?color=%23FFF&label=Pages&logo=cloudflare&logoColor=%23FFF&style=for-the-badge)
-![Checkly](https://img.shields.io/github/checks-status/ElclarkCodes/Elclark/main?label=Checkly&style=for-the-badge)
+![Build](https://img.shields.io/github/workflow/status/ElclarkCodes/Elclark/Verify%20CI?style=flat-square)
+![checkly](https://api.checklyhq.com/v1/badges/checks/23234da3-a63e-4c31-ab63-8fc763f67625?style=flat-square&responseTime=false)
 
 This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
