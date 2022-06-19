@@ -7,6 +7,12 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 ## Changlogs
 
+- v0.4.2 - 06/19/2022
+
+  - :art: style: reformat codes
+  - :rotating_light: test: add [@playwright/test](https://github.com/Microsoft/playwright)
+  - :rotating_light: test: add tests
+
 - v0.4.1 - 06/19/2022
 
   - Update Error Page.
