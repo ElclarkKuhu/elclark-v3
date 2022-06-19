@@ -15,18 +15,16 @@
 	export let error
 </script>
 
-<div class="container">
-	<div class="center">
-		<div class="error">
-			<div class="dialog">
-				<h1>Something Wrong!</h1>
-				<p>
-					Status: {status} <br />
-					Message: {error}
-				</p>
-			</div>
-			<a href="/">Back to home</a>
+<div class="center">
+	<div class="error">
+		<div class="dialog">
+			<h1>Something Wrong!</h1>
+			<p>
+				Status: {status} <br />
+				Message: {error}
+			</p>
 		</div>
+		<a href="/">Back to home</a>
 	</div>
 </div>
 
@@ -43,7 +41,7 @@
 		align-items: flex-start;
 		justify-content: space-between;
 		background: var(--color-tertiary);
-		border-radius: var(--value-radius);
+		border-radius: var(--small);
 		color: var(--color-on-tertiary);
 		width: 100%;
 		margin: 1em 1em;
@@ -77,11 +75,11 @@
 		padding: 1rem;
 		margin-top: 1.25rem;
 		text-align: center;
-		background: var(--color-tertiary-contaner);
-		color: var(--color-on-tertiary-contaner);
+		background: var(--color-tertiary-container);
+		color: var(--color-on-tertiary-container);
 		font-weight: bold;
 		text-decoration: none;
-		border-radius: var(--value-radius);
+		border-radius: var(--small);
 	}
 
 	@media screen and (min-width: 650px) {

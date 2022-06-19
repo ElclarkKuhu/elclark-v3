@@ -5,37 +5,17 @@
 		<link rel="canonical" href="https://elclark.my.id" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- Site Metadata -->
-		<meta
-			name="description"
-			content="I'm a Student & Self-taught Full Stack Developer and software engineer based in Manado, Indonesia."
-		/>
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-
-		<meta property="og:title" content="Hi, I'm Elclark!" />
-		<meta
-			property="og:description"
-			content="I'm a Student & Self-taught Full Stack Developer and software engineer based in Manado, Indonesia."
-		/>
-		<meta property="og:image" content="https://elclark.my.id/img/brand/elclark.png" />
-		<meta property="og:url" content="https://elclark.my.id" />
-
-		<meta name="twitter:title" content="Hi, I'm Elclark!" />
-		<meta
-			name="twitter:description"
-			content="I'm a Student & Self-taught Full Stack Developer and software engineer based in Manado, Indonesia."
-		/>
-		<meta name="twitter:url" content="https://elclark.my.id/img/brand/elclark.png" />
-		<meta name="twitter:card" content="summary" />
+		%sveltekit.head%
 
 		<!-- Global Styling -->
 		<link rel="stylesheet" href="%sveltekit.assets%/css/elclark.css" />
-
-		<!-- Svelte Generated Code -->
-		%sveltekit.head%
 	</head>
 
 	<body>
-		<div class="wrapper">%sveltekit.body%</div>
+		%sveltekit.body%
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet" />
 	</body>
 </html>

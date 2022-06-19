@@ -1,97 +1,217 @@
 <script>
-	let brand = 'Elclark'
+	import { slide } from 'svelte/transition'
+	import Elclark from '$components/icons/elclark.svelte'
+	import Menu from '$components/icons/menu.svelte'
 
-	export let title = "Hi, I'm Elclark"
-	export let desc = ''
-	export let headTitle
-	export let showBrand
+	let navOpen = false
 
-	if (!headTitle) {
-		headTitle = `${brand} - ${title}`
-	}
-
-	if (!showBrand) {
-		if (desc == '') {
-			showBrand = true
-		} else {
-			showBrand = false
-		}
+	function toggleNav() {
+		navOpen = !navOpen
 	}
 </script>
 
-<svelte:head>
-	<title>{headTitle}</title>
-</svelte:head>
+<div class="container">
+	<div class="header">
+		<div class="left">
+			<a href="/">
+				<div class="icon">
+					<Elclark size="2rem" />
+				</div>
+				<span>Elclark</span>
+			</a>
+		</div>
 
-<header>
-	<h1 class={showBrand ? 'h1' : 'h1 bold'}>
-		{#if showBrand}
-			<a class="brand" href="/">{brand}</a>
+		{#if navOpen}
+			<nav class="mobile" on:click={toggleNav} transition:slide>
+				<a href="/about">About</a>
+				<a href="https://paypal.me/elclarkkuhu">Support</a>
+				<a href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
+				<a href="/contact">Contact</a>
+			</nav>
+		{:else}
+			<nav>
+				<a href="/about">About</a>
+				<a href="https://paypal.me/elclarkkuhu">Support</a>
+				<a href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
+				<a href="/contact">Contact</a>
+			</nav>
 		{/if}
-		{title}
-	</h1>
 
-	{#if desc}
-		<p>{desc}</p>
-	{/if}
-
-	<slot />
-</header>
+		<button aria-label="Menu" on:click={toggleNav}>
+			<Menu size="2rem" />
+		</button>
+	</div>
+</div>
 
 <style>
-	header {
-		background: var(--color-primary);
-		color: var(--color-on-primary);
+	.container {
+		position: sticky;
+		top: 0;
+		left: 0;
 
-		padding: var(--value-padding);
-		margin: var(--value-margin);
+		z-index: 1;
 
-		border-radius: var(--value-radius);
+		width: 100%;
+		height: var(--header-height);
+		background: linear-gradient(to bottom, var(--color-background) 25%, transparent 100%);
+		/* backdrop-filter: blur(1rem); */
 	}
 
-	.h1 {
-		font-size: 2em;
-		font-weight: normal;
-		margin: 0 0 0 0;
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		margin: 0 auto;
+		padding: 0 var(--container-padding);
+		max-width: var(--max-width);
+		height: 100%;
 	}
 
-	header p {
-		font-size: 1.1em;
-		margin: 0.75rem 0 0.75rem 0;
-		font-family: var(--value-font-secondary);
+	.left {
+		display: flex;
+		align-items: center;
+
+		color: var(--color-primary);
 	}
 
-	.brand {
+	.icon {
+		display: none;
+	}
+
+	.left a {
+		display: flex;
+		align-items: center;
 		text-decoration: none;
-		font-weight: bold;
-		color: var(--color-on-primary);
+		padding: var(--xxsmall);
+		color: currentColor;
+	}
+
+	.left span {
+		display: block;
+		height: 100%;
+
+		font: var(--font);
+		font-size: var(--xlarge);
+		font-weight: var(--xnormal);
+		letter-spacing: 0.05rem;
+		color: currentColor;
+
 		transition: all 200ms ease;
 	}
 
-	.brand:hover,
-	.brand:focus,
-	.brand:focus-visible {
-		padding: 0 0.25em;
-		background: var(--color-primary-contaner);
-		color: var(--color-on-primary-contaner);
+	a:focus span,
+	a:hover span {
+		padding: 0 var(--xsmall);
+
+		background: var(--color-primary);
+		color: var(--color-on-primary);
 	}
 
-	.bold {
-		font-weight: bold;
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border: none;
+		background: none;
+		color: var(--color-primary);
 	}
 
-	/* @media screen and (min-width: 1200px) {
-		header {
-			border-radius: 0 0 1rem 1rem;
+	nav {
+		display: none;
+	}
+
+	.mobile {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		background: var(--color-primary-container);
+		color: var(--color-on-primary-container);
+	}
+
+	nav a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 75%;
+		height: var(--xxxlarge);
+
+		text-decoration: none;
+		color: currentColor;
+
+		padding: var(--xsmall) var(--xxxsmall);
+		margin: var(--xsmall);
+	}
+
+	nav a:last-child {
+		padding: var(--xsmall) var(--medium);
+		box-shadow: currentColor 0 0 0 0.1rem;
+
+		transition: all 200ms ease;
+	}
+
+	nav a:last-child:hover,
+	nav a:last-child:focus {
+		box-shadow: var(--color-primary) 0 0 0 0.1rem;
+		color: var(--color-primary);
+	}
+
+	a {
+		transition: all 300ms ease;
+		border-radius: var(--xxsmall);
+	}
+
+	a:focus,
+	a:focus-visible {
+		outline: none;
+		box-shadow: var(--color-primary) 0 0 0 0.1rem;
+	}
+
+	@media (min-width: 768px) {
+		.icon {
+			display: flex;
+			align-items: center;
+			filter: drop-shadow(0 0 0.15rem currentColor);
+		}
+
+		nav a {
+			height: auto;
+		}
+
+		.left a {
+			padding: var(--xxsmall) var(--xsmall);
+			border-radius: 2rem 0.25rem 0.25rem 2rem;
+		}
+
+		.left span {
+			margin-left: var(--medium);
+		}
+
+		nav {
+			display: grid;
+			grid-template-columns: repeat(4, auto);
+			grid-gap: var(--small);
+			color: var(--color-on-background);
+		}
+
+		button {
+			display: none;
 		}
 	}
 
-	@media screen and (min-width: 1300px) {
-		header {
-			border-radius: 4rem;
-			margin-top: 1.5rem;
-			padding: 1.5rem 3.5rem;
-			top: 0.5rem;
-		}
-	} */
+	@media (min-width: 1024px) {
+	}
+
+	@media (min-width: 1280px) {
+	}
 </style>

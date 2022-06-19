@@ -1,23 +1,20 @@
-<script>
-	import Header from '$components/header.svelte'
-	import Footer from '$components/footer.svelte'
-</script>
-
-<div class="container">
-	<Header title="Users" />
-	<main>
-		<div class="coming-soon">
-			<h1>Coming Soon</h1>
-			<p>This feature is coming soon!</p>
-		</div>
-	</main>
-	<Footer />
-</div>
+<main>
+	<div class="coming-soon">
+		<h1>Coming Soon</h1>
+		<p>This feature is coming soon!</p>
+	</div>
+</main>
 
 <style>
+	main {
+		margin: var(--xxxlarge) auto;
+		padding: 0 var(--container-padding);
+		max-width: var(--max-width);
+	}
+
 	.coming-soon {
 		background: var(--color-tertiary);
-		border-radius: var(--value-radius);
+		border-radius: var(--small);
 		padding: 1rem 1.5rem;
 		color: var(--color-on-tertiary);
 	}

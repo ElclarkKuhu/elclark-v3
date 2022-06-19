@@ -1,11 +1,21 @@
 # Elclark
 
-![Cloudflare Pages](https://img.shields.io/github/deployments/ElclarkKuhu/Elclark/production?label=Pages&logo=cloudflare&logoColor=%23FFF&style=for-the-badge)
-![Checkly](https://img.shields.io/github/checks-status/ElclarkKuhu/Elclark/cloudflare?label=Checkly&style=for-the-badge)
+![Cloudflare Pages](https://img.shields.io/github/deployments/ElclarkCodes/Elclark/production?color=%23FFF&label=Pages&logo=cloudflare&logoColor=%23FFF&style=for-the-badge)
+![Checkly](https://img.shields.io/github/checks-status/ElclarkCodes/Elclark/main?label=Checkly&style=for-the-badge)
 
 This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 ## Changlogs
+
+- v0.4.0 - 06/16/2022
+
+  - UI Overhaul.
+  - Add blog.
+  - Add about.
+  - Add contact.
+  - Add changelog.
+  - Drop Contentful.
+  - Bug fixes & minor changes.
 
 - v0.3.0 - 05/25/2022
 

@@ -1,0 +1,15 @@
+[
+	{
+		"name": "Coming Soon",
+		"size": "69",
+		"type": "application/zip",
+		"createdAt": "2022-06-13T07:24:00.000Z",
+		"updatedAt": "2022-06-13T07:24:00.000Z",
+		"slug": "soon",
+		"url": "https://cdn.elclark.my.id/files/elclark.zip",
+		"thumbnail": "https://cdn.elclark.my.id/files/elclark.zip",
+		"description": "",
+		"owner": "elclark",
+		"tags": []
+	}
+]

@@ -1,117 +1,91 @@
-<script context="module">
-	import { getEntries } from '$lib/contentful.js'
-
-	export async function load({ params, fetch }) {
-		let author
-		let entries
-
-		try {
-			entries = await getEntries(fetch, {
-				contentType: 'file',
-				fields: [
-					{
-						name: 'slug',
-						value: params.slug
-					}
-				]
-			})
-		} catch (error) {
-			return {
-				status: 500,
-				error
-			}
-		}
-
-		if (entries.items.length === 0) {
-			return {
-				status: 404,
-				error: 'The file you requested does not exist.'
-			}
-		}
-
-		let file = entries.items[0].fields
-		let date = {
-			createdAt: entries.items[0].sys.createdAt,
-			updatedAt: entries.items[0].sys.updatedAt
-		}
-
-		try {
-			author = await getEntries(
-				fetch,
-				{
-					contentType: 'author'
-				},
-				file.author.sys.id
-			)
-		} catch (error) {
-			console.log(error)
-
-			return {
-				status: 500,
-				error
-			}
-		}
-
-		return {
-			props: {
-				file,
-				author,
-				date
-			}
-		}
-	}
-</script>
-
 <script>
 	import moment from 'moment'
+	import { page } from '$app/stores'
 	import { onDestroy } from 'svelte'
 	import bytesToSize from '$lib/bytesToSize'
 
-	import Link from '$components/link.svelte'
-	import Header from '$components/header.svelte'
-	import Footer from '$components/footer.svelte'
-
 	export let file
-	export let date
 	export let author
 
-	file.createdAt = moment(date.createdAt).fromNow()
-	let createdAt = setInterval(() => {
-		file.createdAt = moment(date.createdAt).fromNow()
+	let createdAt = moment(file.createdAt).fromNow()
+	let Loop = setInterval(() => {
+		createdAt = moment(file.createdAt).fromNow()
 	}, 1000)
 
-	// file.updatedAt = moment(date.updatedAt).fromNow()
-	// let updatedAt = setInterval(() => {
-	// 	file.updatedAt = moment(date.updatedAt).fromNow()
-	// }, 500)
-
 	onDestroy(() => {
-		clearInterval(createdAt)
-		// clearInterval(updatedAt)
+		clearInterval(Loop)
 	})
+
+	const title = `${file.name} - Elclark`
+	const description = file.description
+	const image = 'https://elclark.my.id/img/brand/elclark.png'
 </script>
 
-<div class="container">
-	<Header title="Files" />
-	<main>
-		<div class="info">
-			<h2 class="filename">{file.name}</h2>
-			<a href="/profiles/{author.fields.username}" class="owner"
-				>{author.fields.firstName} {author.fields.lastName}</a
-			>
-			-
-			<span class="size">{bytesToSize(file.size)}</span> -
-			<span class="date">Uploaded {file.createdAt}</span>
-		</div>
-		<Link href={file.url} type="tertiary">Download</Link>
-	</main>
-	<Footer />
-</div>
+<svelte:head>
+	<!-- Metadata -->
+	<title>{title}</title>
+	<link rel="icon" href="/favicon.png" />
+
+	<!-- Basic HTML Meta Tags -->
+	<meta name="keywords" content="Elclark, Technonlgy, Programming, Blog" />
+	<meta name="description" content={description} />
+	<meta name="subject" content={title} />
+	<meta name="copyright" content="Elclark" />
+	<meta name="language" content="EN" />
+	<meta name="robots" content="index,follow" />
+	<meta name="author" content="Elclark, founder@elclark.my.id" />
+	<meta name="designer" content="Elclark, founder@elclark.my.id" />
+	<meta name="owner" content="Elclark" />
+	<meta name="url" content={$page.url.href} />
+	<meta name="identifier-URL" content={$page.url.origin} />
+	<meta name="category" content="Tech, Landing Page, Portfolio, Blog" />
+	<meta name="coverage" content="Worldwide" />
+	<meta name="distribution" content="Global" />
+	<meta name="rating" content="General" />
+
+	<!-- OpenGraph Meta Tags -->
+	<meta name="og:title" content={title} />
+	<meta name="og:type" content="website" />
+	<meta name="og:url" content={$page.url.href} />
+	<meta name="og:image" content={image} />
+	<meta name="og:site_name" content="Elclark" />
+	<meta name="og:description" content={description} />
+
+	<meta name="og:email" content="mail@elclark.my.id" />
+	<meta name="og:region" content="MDO" />
+	<meta name="og:country-name" content="ID" />
+
+	<!-- Twitter Metadata -->
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:url" content={image} />
+	<meta name="twitter:card" content="summary" />
+</svelte:head>
+
+<main>
+	<div class="info">
+		<h2 class="filename">{file.name}</h2>
+		<a href="/profiles/{author.username}" class="author">
+			{author.firstName}
+			{author.lastName}
+		</a>
+		-
+		<span class="size">{bytesToSize(file.size)}</span> -
+		<span class="date">Uploaded {createdAt}</span>
+	</div>
+	<!-- <Button href={file.url} color="tertiary">Download</Button> -->
+</main>
 
 <style>
+	main {
+		margin: var(--xxxlarge) auto;
+		padding: 0 var(--container-padding);
+		max-width: var(--max-width);
+	}
+
 	.info {
 		background: var(--color-tertiary);
-		border-radius: var(--value-radius);
+		border-radius: var(--medium);
 		padding: 1rem 1.5rem;
 		color: var(--color-on-tertiary);
 	}
@@ -128,16 +102,48 @@
 		font-weight: bold;
 	}
 
-	.info .owner {
+	.info .author {
 		display: inline-block;
-		border-radius: 1rem;
+
 		padding: 0.25rem 0.5rem;
-		color: var(--color-on-tertiary-contaner);
-		background: var(--color-tertiary-contaner);
+		border-radius: 1rem;
 		text-decoration: none;
+
+		background: var(--color-tertiary-container);
+		color: var(--color-on-tertiary-container);
+
+		position: relative;
+	}
+
+	.info .author::after {
+		content: '';
+		display: block;
+
+		width: 100%;
+		height: 100%;
+
+		top: 0;
+		left: 0;
+		position: absolute;
+
+		opacity: 0;
+		background: #fff;
+		border-radius: 1rem;
+
+		transition: opacity 200ms ease;
+	}
+
+	.info .author:hover::after {
+		opacity: 0.2;
 	}
 
 	.info span {
 		padding: 0.1rem 0;
+	}
+
+	main {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: var(--small);
 	}
 </style>

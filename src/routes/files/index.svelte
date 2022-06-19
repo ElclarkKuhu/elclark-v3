@@ -1,68 +1,81 @@
-<script context="module">
-	import { getEntries } from '$lib/contentful.js'
-
-	export async function load({ fetch }) {
-		let entries
-
-		try {
-			entries = await getEntries(fetch, {
-				contentType: 'file',
-				order: '-sys.createdAt'
-			})
-		} catch (error) {
-			return {
-				status: 500,
-				error
-			}
-		}
-
-		if (entries.items.length === 0) {
-			return {
-				status: 404,
-				error: 'No files found'
-			}
-		}
-
-		return {
-			props: {
-				files: entries.items
-			}
-		}
-	}
-</script>
-
 <script>
 	import moment from 'moment'
+	import { page } from '$app/stores'
 	import bytesToSize from '$lib/bytesToSize'
 
-	import Header from '$components/header.svelte'
-	import Footer from '$components/footer.svelte'
-
 	export let files
+
+	const title = 'Elclark Files'
+	const description = 'Find all files uploaded by Elclark'
+	const image = 'https://elclark.my.id/img/brand/elclark.png'
 </script>
 
-<div class="container">
-	<Header title="Files" desc="List of all the shared files" showBrand="true" />
-	<main>
-		{#each files as file}
-			<a href="/files/{file.fields.slug}">
-				<h3>
-					{file.fields.name}
-				</h3>
-				<p>
-					Uploaded {moment(file.sys.createdAt).fromNow()} -
-					{#if file.sys.updatedAt !== file.sys.createdAt}
-						Updated {moment(file.sys.updatedAt).fromNow()} -
-					{/if}
-					{bytesToSize(file.fields.size)}
-				</p>
-			</a>
-		{/each}
-	</main>
-	<Footer />
-</div>
+<svelte:head>
+	<!-- Metadata -->
+	<title>{title}</title>
+	<link rel="icon" href="/favicon.png" />
+
+	<!-- Basic HTML Meta Tags -->
+	<meta name="keywords" content="Elclark, Technonlgy, Programming, Blog" />
+	<meta name="description" content={description} />
+	<meta name="subject" content={title} />
+	<meta name="copyright" content="Elclark" />
+	<meta name="language" content="EN" />
+	<meta name="robots" content="index,follow" />
+
+	<meta name="author" content="Elclark, founder@elclark.my.id" />
+	<meta name="designer" content="Elclark, founder@elclark.my.id" />
+	<meta name="owner" content="Elclark" />
+	<meta name="url" content={$page.url.href} />
+	<meta name="identifier-URL" content={$page.url.origin} />
+	<meta name="category" content="Tech, Landing Page, Portfolio, Blog" />
+	<meta name="coverage" content="Worldwide" />
+	<meta name="distribution" content="Global" />
+	<meta name="rating" content="General" />
+
+	<!-- OpenGraph Meta Tags -->
+	<meta name="og:title" content={title} />
+	<meta name="og:type" content="website" />
+	<meta name="og:url" content={$page.url.href} />
+	<meta name="og:image" content={image} />
+	<meta name="og:site_name" content="Elclark" />
+	<meta name="og:description" content={description} />
+
+	<meta name="og:email" content="mail@elclark.my.id" />
+	<meta name="og:region" content="MDO" />
+	<meta name="og:country-name" content="ID" />
+
+	<!-- Twitter Metadata -->
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:url" content={image} />
+	<meta name="twitter:card" content="summary" />
+</svelte:head>
+
+<main>
+	{#each files as file}
+		<a href="/files/{file.slug}">
+			<h3>
+				{file.name}
+			</h3>
+			<p>
+				Uploaded {moment(file.createdAt).fromNow()} -
+				{#if file.updatedAt !== file.createdAt}
+					Updated {moment(file.updatedAt).fromNow()} -
+				{/if}
+				{bytesToSize(file.size)}
+			</p>
+		</a>
+	{/each}
+</main>
 
 <style>
+	main {
+		margin: var(--xxxlarge) auto;
+		padding: 0 var(--container-padding);
+		max-width: var(--max-width);
+	}
+
 	a {
 		display: block;
 		padding: 1.5rem 2.5rem;
@@ -73,7 +86,7 @@
 		background: var(--color-tertiary);
 		color: var(--color-on-tertiary);
 
-		border-radius: var(--value-radius);
+		border-radius: var(--medium);
 		overflow: hidden;
 	}
 

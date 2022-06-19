@@ -1,98 +1,81 @@
-<a href="https://www.vultr.com/?ref=8982504-8H" class="ads">
-	<span>Vultr:</span> Easily deploy cloud servers, bare metal, and storage worldwide.
-</a>
+<script>
+	import YouTube from '$components/icons/youtube.svelte'
+	import GitHub from '$components/icons/github.svelte'
+	import Twitter from '$components/icons/twitter.svelte'
+</script>
+
 <footer>
+	<div class="wrapper">
+		<p>Made and Designed by Elclark Kuhu.</p>
+		<p>
+			Build using <a href="https://kit.svelte.dev/">SvelteKit</a>. Hosted And Protected By
+			<a href="https://cloudflare.com">CloudFlare</a>.
+		</p>
+	</div>
 	<div class="socials">
-		<a href="https://github.com/ElclarkKuhu/">GitHub</a>
-		<a href="https://youtube.com/channel/UCfPwggPTrPAC3wyOVa7miAg/">YouTube</a>
-		<a href="https://www.linkedin.com/in/elclark-kuhu">Linkedin</a>
-		<a href="https://www.instagram.com/elclark__/">Instagram</a>
-		<a href="https://twitter.com/elclark_kuhu/" class="twt">Twitter</a>
-	</div>
-	<div class="links">
-		<a href="/privacy-policy">Privacy Policy</a>
-		<a href="/terms-and-conditions">Terms & Conditions</a>
-	</div>
-	<div class="copyright">
-		<span>Copyright &copy; 2022 Elclark</span>
+		<a href="https://twitter.com/elclark_kuhu/" aria-label="Twitter">
+			<Twitter size="2rem" />
+		</a>
+		<a href="https://github.com/ElclarkKuhu/" aria-label="GitHub">
+			<GitHub size="2rem" />
+		</a>
+		<a href="https://youtube.com/channel/UCfPwggPTrPAC3wyOVa7miAg" aria-label="YouTube">
+			<YouTube size="2rem" />
+		</a>
 	</div>
 </footer>
 
 <style>
 	footer {
-		text-align: center;
-		border-radius: var(--value-radius);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 
-		background: var(--color-surface-contaner);
-		color: var(--color-on-surface-contaner);
-
-		padding: 1.5rem;
-		margin: var(--value-margin);
-		margin-top: 0.5rem;
+		margin: 0 auto;
+		max-width: var(--max-width);
+		padding: var(--header-height) var(--container-padding) var(--container-padding)
+			var(--container-padding);
+		background-color: var(--color-background);
 	}
 
-	.twt {
-		display: none;
+	.wrapper {
+		padding: var(--xxsmall);
+		margin-bottom: var(--large);
 	}
 
-	.ads {
-		display: block;
-		text-align: center;
-
-		padding: 1rem;
-		margin: var(--value-margin);
-		margin-bottom: 0.5rem;
-
-		border-radius: var(--value-radius);
-		background: var(--color-surface-contaner);
-		color: var(--color-on-surface-contaner);
+	.socials {
+		display: flex;
+		align-items: center;
 	}
-
-	.ads span {
-		font-weight: bold;
-		color: var(--color-primary);
-	}
-
-	/* .socials {
-
-	} */
 
 	.socials a {
-		padding: 0.95em 0.25em;
-
-		font-weight: bold;
+		display: flex;
+		padding: var(--xsmall);
+		color: var(--color-on-background);
 		text-decoration: none;
-		color: var(--color-on-surface);
+
+		transition: all 200ms ease-in-out;
 	}
 
 	.socials a:hover {
-		color: var(--color-secondary);
-		transition: color 200ms ease-in-out;
+		color: var(--color-primary);
+		filter: drop-shadow(0 0 0.15rem currentColor);
 	}
 
-	.links {
-		margin: 0.25em 0 0 0;
-	}
-
-	.links a {
-		padding: 0.95rem 0.25rem;
-	}
-
-	.copyright {
-		opacity: 0.75;
+	p {
 		font-size: 0.9rem;
-		margin: 0.25em 0 0 0;
-		color: var(--color-on-surface);
+		margin: var(--xxsmall) 0;
+		opacity: 0.9;
 	}
 
-	div span {
-		margin: 0 0.25em;
-		display: inline-block;
-	}
+	@media (min-width: 768px) {
+		footer {
+			flex-direction: row;
+			justify-content: space-between;
+		}
 
-	@media screen and (min-width: 465px) {
-		.twt {
-			display: unset;
+		p {
+			font-size: 0.95rem;
 		}
 	}
 </style>

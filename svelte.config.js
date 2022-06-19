@@ -1,5 +1,5 @@
 import path from 'path'
-import adapter from '@sveltejs/adapter-auto'
+import adapter from '@sveltejs/adapter-cloudflare'
 
 export default {
 	kit: {
@@ -7,13 +7,15 @@ export default {
 		prerender: {
 			enabled: true,
 			default: true,
-			crawl: true
+			crawl: true,
+			onError: 'continue'
 		},
 		vite: {
 			resolve: {
 				alias: {
 					$components: path.resolve('./src/components'),
-					$stores: path.resolve('./src/stores')
+					$stores: path.resolve('./src/stores'),
+					$data: path.resolve('./src/data')
 				}
 			}
 		}
