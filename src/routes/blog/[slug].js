@@ -4,7 +4,7 @@ export async function get({ params }) {
 	return {
 		body: {
 			blog: data.find((post) => post.slug === params.slug),
-			more: data.slice(0, 5)
+			more: data.filter((post) => post.slug !== params.slug).slice(0, 5)
 		}
 	}
 }
