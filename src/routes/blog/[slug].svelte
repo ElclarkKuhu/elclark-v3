@@ -16,31 +16,24 @@
 	<link rel="icon" href="/favicon.png" />
 
 	<!-- Basic HTML Meta Tags -->
-	<meta name="keywords" content="Elclark, Technonlgy, Programming, Blog" />
+	<meta
+		name="keywords"
+		content="Elclark, Code, software engineer, technology, programming, science, music, gaming"
+	/>
 	<meta name="description" content={description} />
 	<meta name="subject" content={title} />
 	<meta name="copyright" content="Elclark" />
 	<meta name="language" content="EN" />
 	<meta name="robots" content="index,follow" />
-	<!-- <meta name="revised" content="Sunday, July 18th, 2010, 5:15 pm" /> -->
-	<!-- <meta name="abstract" content="" /> -->
-	<!-- <meta name="topic" content="" /> -->
-	<!-- <meta name="summary" content="" /> -->
-	<!-- <meta name="Classification" content="Business" /> -->
 	<meta name="author" content="Elclark, founder@elclark.my.id" />
 	<meta name="designer" content="Elclark, founder@elclark.my.id" />
 	<meta name="owner" content="Elclark" />
 	<meta name="url" content={$page.url.href} />
 	<meta name="identifier-URL" content={$page.url.origin} />
-	<!-- <meta name="directory" content="submission" /> -->
-	<meta name="category" content="Tech, Landing Page, Portfolio, Blog" />
+	<meta name="category" content="technology, portfolio, blog, contact" />
 	<meta name="coverage" content="Worldwide" />
 	<meta name="distribution" content="Global" />
 	<meta name="rating" content="General" />
-	<!-- <meta name="revisit-after" content="7 days" /> -->
-	<!-- <meta http-equiv="Expires" content="0" /> -->
-	<!-- <meta http-equiv="Pragma" content="no-cache" /> -->
-	<!-- <meta http-equiv="Cache-Control" content="no-cache" /> -->
 
 	<!-- OpenGraph Meta Tags -->
 	<meta name="og:title" content={title} />
@@ -52,42 +45,13 @@
 
 	<meta name="article:published_time" content={blog.createdAt} />
 	<meta name="article:modified_time" content={blog.updatedAt} />
-	<!-- <meta name="article:expiration_time" content={blog.expiredAt} /> -->
 	<meta name="article:author" content="Elclark" />
 	<meta name="article:section" content="Technonlgy" />
 	<meta name="article:tag" content="Elclark, Technonlgy, Programming" />
 
-	<!-- <meta name="fb:page_id" content="43929265776" /> -->
-
 	<meta name="og:email" content="mail@elclark.my.id" />
-	<!-- <meta name="og:phone_number" content="650-123-4567" /> -->
-	<!-- <meta name="og:fax_number" content="+1-415-123-4567" /> -->
-
-	<!-- <meta name="og:latitude" content="37.416343" /> -->
-	<!-- <meta name="og:longitude" content="-122.153013" /> -->
-	<!-- <meta name="og:street-address" content="1601 S California Ave" /> -->
-	<!-- <meta name="og:locality" content="Palo Alto" /> -->
 	<meta name="og:region" content="MDO" />
-	<!-- <meta name="og:blogal-code" content="94304" /> -->
 	<meta name="og:country-name" content="ID" />
-
-	<!-- <meta property="og:type" content="game.achievement" /> -->
-	<!-- <meta property="og:points" content="POINTS_FOR_ACHIEVEMENT" /> -->
-
-	<!-- <meta property="og:video" content="http://example.com/awesome.swf" /> -->
-	<!-- <meta property="og:video:height" content="640" /> -->
-	<!-- <meta property="og:video:width" content="385" /> -->
-	<!-- <meta property="og:video:type" content="application/x-shockwave-flash" /> -->
-	<!-- <meta property="og:video" content="http://example.com/html5.mp4" /> -->
-	<!-- <meta property="og:video:type" content="video/mp4" /> -->
-	<!-- <meta property="og:video" content="http://example.com/fallback.vid" /> -->
-	<!-- <meta property="og:video:type" content="text/html" /> -->
-
-	<!-- <meta property="og:audio" content="http://example.com/amazing.mp3" /> -->
-	<!-- <meta property="og:audio:title" content="Amazing Song" /> -->
-	<!-- <meta property="og:audio:artist" content="Amazing Band" /> -->
-	<!-- <meta property="og:audio:album" content="Amazing Album" /> -->
-	<!-- <meta property="og:audio:type" content="application/mp3" /> -->
 
 	<!-- Twitter Metadata -->
 	<meta name="twitter:title" content={title} />

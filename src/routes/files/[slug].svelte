@@ -27,7 +27,10 @@
 	<link rel="icon" href="/favicon.png" />
 
 	<!-- Basic HTML Meta Tags -->
-	<meta name="keywords" content="Elclark, Technonlgy, Programming, Blog" />
+	<meta
+		name="keywords"
+		content="Elclark, Code, software engineer, technology, programming, science, music, gaming, files"
+	/>
 	<meta name="description" content={description} />
 	<meta name="subject" content={title} />
 	<meta name="copyright" content="Elclark" />
@@ -38,7 +41,7 @@
 	<meta name="owner" content="Elclark" />
 	<meta name="url" content={$page.url.href} />
 	<meta name="identifier-URL" content={$page.url.origin} />
-	<meta name="category" content="Tech, Landing Page, Portfolio, Blog" />
+	<meta name="category" content="technology, portfolio, files" />
 	<meta name="coverage" content="Worldwide" />
 	<meta name="distribution" content="Global" />
 	<meta name="rating" content="General" />
