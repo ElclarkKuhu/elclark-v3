@@ -73,7 +73,7 @@
 	main {
 		position: relative;
 
-		margin: var(--xxxlarge) auto 0 auto;
+		margin: 0 auto 0 auto;
 		padding: 0 var(--container-padding);
 		max-width: var(--max-width);
 
@@ -100,5 +100,11 @@
 		height: var(--height);
 
 		background: linear-gradient(to top, var(--color-background) 25%, transparent 100%);
+	}
+
+	@media (min-height: 768px), (min-width: 1024px) {
+		.posts {
+			margin: var(--xxxlarge) auto 0 auto;
+		}
 	}
 </style>
