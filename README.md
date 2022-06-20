@@ -13,6 +13,11 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
   - :rotating_light: test: add [@playwright/test](https://github.com/Microsoft/playwright)
   - :rotating_light: test: add tests
   - :recycle: chore: add [GitHub Actions](https://github.com/ElclarkCodes/Elclark/actions)
+  - :bug: fix: to much margin top when hero not sticky
+  - :bug: fix: Mobile navbar height
+  - :bug: fix: recommending current post
+  - :bug: fix: hide more posts when there is no more posts
+  - :bug: fix: hide ad template
 
 - v0.4.1 - 06/19/2022
 
