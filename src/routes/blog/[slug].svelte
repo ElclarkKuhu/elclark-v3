@@ -167,7 +167,7 @@
 		border-radius: var(--xsmall);
 
 		/* Temporary */
-		display: flex;
+		display: none;
 		justify-content: center;
 		align-items: center;
 
