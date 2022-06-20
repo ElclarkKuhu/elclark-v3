@@ -10,11 +10,16 @@
 
 	function toggleNav() {
 		navOpen = !navOpen
-		height = navOpen ? window.innerHeight + 'px' : '0px'
 	}
 
 	onMount(() => {
 		height = window.innerHeight + 'px'
+
+		window.addEventListener('resize', () => {
+			if (navOpen) {
+				height = window.innerHeight + 'px'
+			}
+		})
 	})
 </script>
 
