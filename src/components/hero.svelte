@@ -20,7 +20,7 @@
 <style>
 	.container {
 		margin: 0 auto;
-		padding: 0 var(--container-padding);
+		padding: var(--xxlarge) var(--container-padding) 0 var(--container-padding);
 		max-width: var(--max-width);
 
 		overflow: hidden;
@@ -33,7 +33,7 @@
 		justify-content: center;
 
 		margin: 0;
-		padding: var(--medium) 0;
+		padding: 0;
 	}
 
 	.wrapper {
@@ -85,7 +85,7 @@
 	@media (min-height: 768px), (min-width: 1024px) {
 		.container {
 			position: sticky;
-			top: calc(var(--header-height) + var(--xxxlarge));
+			top: var(--header-height);
 			z-index: -1;
 			left: 0;
 		}

@@ -87,6 +87,7 @@
 		display: grid;
 		grid-gap: var(--small);
 		grid-template-columns: repeat(1, 1fr);
+		margin: var(--large) auto 0 auto;
 	}
 
 	.top-edge {
@@ -103,11 +104,5 @@
 		height: var(--height);
 
 		background: linear-gradient(to top, var(--color-background) 25%, transparent 100%);
-	}
-
-	@media (min-height: 768px), (min-width: 1024px) {
-		.posts {
-			margin: var(--xxxlarge) auto 0 auto;
-		}
 	}
 </style>
