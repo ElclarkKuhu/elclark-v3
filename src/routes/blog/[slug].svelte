@@ -111,14 +111,16 @@
 			Advertisement
 		</div>
 		{#if more}
-			<div class="more" in:fade>
-				<h4>More posts</h4>
-				<div>
-					{#each more as post}
-						<a href="/blog/{post.slug}">{post.title}</a>
-					{/each}
+			{#if more.length > 0}
+				<div class="more" in:fade>
+					<h4>More posts</h4>
+					<div>
+						{#each more as post}
+							<a href="/blog/{post.slug}">{post.title}</a>
+						{/each}
+					</div>
 				</div>
-			</div>
+			{/if}
 		{/if}
 	</div>
 </article>
