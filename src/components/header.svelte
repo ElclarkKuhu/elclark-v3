@@ -1,13 +1,21 @@
 <script>
+	import { onMount } from 'svelte'
 	import { slide } from 'svelte/transition'
+
 	import Elclark from '$components/icons/elclark.svelte'
 	import Menu from '$components/icons/menu.svelte'
 
+	let height = '0px'
 	let navOpen = false
 
 	function toggleNav() {
 		navOpen = !navOpen
+		height = navOpen ? window.innerHeight + 'px' : '0px'
 	}
+
+	onMount(() => {
+		height = window.innerHeight + 'px'
+	})
 </script>
 
 <div class="container">
@@ -22,7 +30,7 @@
 		</div>
 
 		{#if navOpen}
-			<nav class="mobile" on:click={toggleNav} transition:slide>
+			<nav class="mobile" on:click={toggleNav} transition:slide style:height>
 				<a href="/about">About</a>
 				<a href="https://paypal.me/elclarkkuhu">Support</a>
 				<a href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
@@ -126,13 +134,12 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100vw;
-		height: 100vh;
 
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		width: 100%;
 
 		background: var(--color-primary-container);
 		color: var(--color-on-primary-container);
@@ -150,7 +157,7 @@
 		color: currentColor;
 
 		padding: var(--xsmall) var(--xxxsmall);
-		margin: var(--xsmall);
+		margin: var(--xsmall) 0;
 	}
 
 	nav a:last-child {
@@ -184,6 +191,13 @@
 			filter: drop-shadow(0 0 0.15rem currentColor);
 		}
 
+		nav {
+			display: grid;
+			grid-template-columns: repeat(4, auto);
+			grid-gap: var(--small);
+			color: var(--color-on-background);
+		}
+
 		nav a {
 			height: auto;
 		}
@@ -197,21 +211,14 @@
 			margin-left: var(--medium);
 		}
 
-		nav {
-			display: grid;
-			grid-template-columns: repeat(4, auto);
-			grid-gap: var(--small);
-			color: var(--color-on-background);
-		}
-
 		button {
 			display: none;
 		}
 	}
 
-	@media (min-width: 1024px) {
+	/* @media (min-width: 1024px) {
 	}
 
 	@media (min-width: 1280px) {
-	}
+	} */
 </style>
