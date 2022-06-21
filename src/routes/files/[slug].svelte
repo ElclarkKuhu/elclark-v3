@@ -25,6 +25,7 @@
 	<!-- Metadata -->
 	<title>{title}</title>
 	<link rel="icon" href="/favicon.png" />
+	<link rel="canonical" href={$page.url.href} />
 
 	<!-- Basic HTML Meta Tags -->
 	<meta
