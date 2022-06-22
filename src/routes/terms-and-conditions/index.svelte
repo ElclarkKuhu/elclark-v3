@@ -79,7 +79,7 @@
 		he/she or they, are taken as interchangeable and therefore as referring to same.
 	</p>
 
-	<h2><strong>Cookies</strong></h2>
+	<h2>Cookies</h2>
 
 	<p>
 		We employ the use of cookies. By accessing elclark.my.id, you agreed to use cookies in agreement
@@ -93,7 +93,7 @@
 		cookies.
 	</p>
 
-	<h2><strong>License</strong></h2>
+	<h2>License</h2>
 
 	<p>
 		Unless otherwise stated, Elclark and/or its licensors own the intellectual property rights for
@@ -109,13 +109,6 @@
 		<li>Reproduce, duplicate or copy material from elclark.my.id</li>
 		<li>Redistribute content from elclark.my.id</li>
 	</ul>
-
-	<p>
-		This Agreement shall begin on the date hereof. Our Terms and Conditions were created with the
-		help of the <a href="https://www.privacypolicies.com/blog/sample-terms-conditions-template/"
-			>Terms And Conditions Template</a
-		>.
-	</p>
 
 	<p>
 		Parts of this website offer an opportunity for users to post and exchange opinions and
@@ -158,7 +151,7 @@
 		use, reproduce and edit any of your Comments in any and all forms, formats or media.
 	</p>
 
-	<h2><strong>Hyperlinking to our Content</strong></h2>
+	<h2>Hyperlinking to our Content</h2>
 
 	<p>The following organizations may link to our Website without prior written approval:</p>
 
@@ -233,14 +226,14 @@
 		agreement.
 	</p>
 
-	<h2><strong>iFrames</strong></h2>
+	<h2>iFrames</h2>
 
 	<p>
 		Without prior approval and written permission, you may not create frames around our Webpages
 		that alter in any way the visual presentation or appearance of our Website.
 	</p>
 
-	<h2><strong>Content Liability</strong></h2>
+	<h2>Content Liability</h2>
 
 	<p>
 		We shall not be hold responsible for any content that appears on your Website. You agree to
@@ -250,11 +243,11 @@
 		party rights.
 	</p>
 
-	<h2><strong>Your Privacy</strong></h2>
+	<h2>Your Privacy</h2>
 
-	<p>Please read Privacy Policy</p>
+	<p>Please read <a href="/privacy-policy">Privacy Policy</a></p>
 
-	<h2><strong>Reservation of Rights</strong></h2>
+	<h2>Reservation of Rights</h2>
 
 	<p>
 		We reserve the right to request that you remove all links or any particular link to our Website.
@@ -263,7 +256,7 @@
 		linking to our Website, you agree to be bound to and follow these linking terms and conditions.
 	</p>
 
-	<h2><strong>Removal of links from our website</strong></h2>
+	<h2>Removal of links from our website</h2>
 
 	<p>
 		If you find any link on our Website that is offensive for any reason, you are free to contact
@@ -277,7 +270,7 @@
 		the material on the website is kept up to date.
 	</p>
 
-	<h2><strong>Disclaimer</strong></h2>
+	<h2>Disclaimer</h2>
 
 	<p>
 		To the maximum extent permitted by applicable law, we exclude all representations, warranties
@@ -325,7 +318,6 @@
 		font-weight: var(--bold);
 		margin: 0 0 var(--large) 0;
 	}
-
 	p {
 		width: 100%;
 		margin: 0 0 var(--large) 0;
