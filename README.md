@@ -7,6 +7,10 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 ## Changlogs
 
+- v0.4.3:
+
+  - :recycle: chore: update GitHub Link
+
 - v0.4.2 - 06/19/2022
 
   - :art: style: reformat codes

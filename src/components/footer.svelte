@@ -16,7 +16,7 @@
 		<a href="https://twitter.com/elclark_kuhu/" aria-label="Twitter">
 			<Twitter size="2rem" />
 		</a>
-		<a href="https://github.com/ElclarkKuhu/" aria-label="GitHub">
+		<a href="https://github.com/ElclarkCodes/" aria-label="GitHub">
 			<GitHub size="2rem" />
 		</a>
 		<a href="https://youtube.com/channel/UCfPwggPTrPAC3wyOVa7miAg" aria-label="YouTube">
