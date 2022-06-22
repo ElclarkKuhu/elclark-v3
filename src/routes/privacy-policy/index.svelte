@@ -71,9 +71,7 @@
 		This Privacy Policy applies only to our online activities and is valid for visitors to our
 		website with regards to the information that they shared and/or collect in elclark.my.id. This
 		policy is not applicable to any information collected offline or via channels other than this
-		website. Our Privacy Policy was created with the help of the <a
-			href="https://www.privacypolicygenerator.info">Free Privacy Policy Generator</a
-		>.
+		website.
 	</p>
 
 	<h2>Consent</h2>
@@ -134,13 +132,6 @@
 		information including visitors' preferences, and the pages on the website that the visitor
 		accessed or visited. The information is used to optimize the users' experience by customizing
 		our web page content based on visitors' browser type and/or other information.
-	</p>
-
-	<p>
-		For more general information on cookies, please read <a
-			href="https://www.generateprivacypolicy.com/#cookies"
-			>the Cookies article on Generate Privacy Policy website</a
-		>.
 	</p>
 
 	<h2>Advertising Partners Privacy Policies</h2>
