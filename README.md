@@ -14,6 +14,8 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
   - :rotating_light: test: add tests
   - :recycle: chore: add [GitHub Actions](https://github.com/ElclarkCodes/Elclark/actions)
   - :recycle: chore: update sitemap & robots.txt
+  - :recycle: chore: update Terms of conditions
+  - :recycle: chore: update Privacy Policy
   - :recycle: chore: update pages metadata
   - :bug: fix: to much margin top when hero not sticky
   - :bug: fix: Mobile navbar height
@@ -25,49 +27,49 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 - v0.4.1 - 06/19/2022
 
-  - Update Error Page.
-  - Update Blog title Margin.
+  - :new: feat: Update Error Page.
+  - :new: feat: Update Blog title Margin.
 
 - v0.4.0 - 06/19/2022
 
-  - UI Overhaul.
-  - Add blog.
-  - Add about.
-  - Add contact.
-  - Add changelog.
-  - Drop Contentful.
-  - Bug fixes & minor changes.
+  - :new: feat: UI Overhaul.
+  - :new: feat: Add blog.
+  - :new: feat: Add about.
+  - :new: feat: Add contact.
+  - :new: feat: Add changelog.
+  - :recycle: chore: Bug fixes & minor changes.
+  - :x: Drop Contentful.
 
 - v0.3.0 - 05/25/2022
 
-  - Removed `/admin`
-  - Removed `/login`
-  - Removed `/logout`
-  - Dropped [aws-sdk](https://github.com/aws/aws-sdk-js)
-  - Dropped upload file
-  - Use [Contentful](https://www.contentful.com/) for content management
-  - Manually Specify [@sveltejs/kit version](https://github.com/sveltejs/kit) (until it's released)
-  - Manually Specify [@sveltejs/adapter-auto](https://github.com/sveltejs/kit/tree/master/packages/adapter-auto) version (until it's released)
-  - Bump dependencies to latest versions
-  - Rewrite the backend code for `/files`
-  - Minor SEO & UX changes
+  - :x: Removed `/admin`
+  - :x: Removed `/login`
+  - :x: Removed `/logout`
+  - :x: Dropped [aws-sdk](https://github.com/aws/aws-sdk-js)
+  - :x: Dropped upload file
+  - :new: feat: Rewrite the backend code for `/files`
+  - :new: feat: Use [Contentful](https://www.contentful.com/) for content management
+  - :recycle: chore: Manually Specify [@sveltejs/kit version](https://github.com/sveltejs/kit) (until it's released)
+  - :recycle: chore: Manually Specify [@sveltejs/adapter-auto](https://github.com/sveltejs/kit/tree/master/packages/adapter-auto) version (until it's released)
+  - :recycle: chore: Bump dependencies to latest versions
+  - :recycle: chore: Minor SEO & UX changes
 
 - v0.2.5 - 05/04/2022
 
-  - Cleanup & Refactor Code.
-  - Performance Improvements.
-  - Move & Rewrite All endpoints to [ElclarkKuhu/Elclark-API](https://github.com/ElclarkKuhu/Elclark-API).
-  - Use [@sveltejs/adapter-auto](https://github.com/sveltejs/kit/tree/master/packages/adapter-auto).
+  - :recycle: chore: Cleanup & Refactor Code.
+  - :recycle: chore: Performance Improvements.
+  - :recycle: chore: Move & Rewrite All endpoints to [ElclarkKuhu/Elclark-API](https://github.com/ElclarkKuhu/Elclark-API).
+  - :new: feat: Use [@sveltejs/adapter-auto](https://github.com/sveltejs/kit/tree/master/packages/adapter-auto).
 
 - v0.2.4 - 04/16/2022
 
-  - Performance Optimization
+  - :recycle: chore: Performance Optimization
 
 - v0.2.3 - 04/16/2022
 
-  - SEO Optimization
+  - :recycle: chore: SEO Optimization
 
 - v0.2.2 - 04/15/2022
-  - Add Login with username and password
-  - Code optimizations
-  - Minor Bug Fixes
+  - :new: feat: Add Login with username and password
+  - :recycle: chore: Code optimizations
+  - :recycle: chore: Minor Bug Fixes
