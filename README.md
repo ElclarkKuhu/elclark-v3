@@ -10,6 +10,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 - v0.4.2 - 06/19/2022
 
   - :art: style: reformat codes
+  - :new: feat: add all blog posts
   - :rotating_light: test: add [@playwright/test](https://github.com/Microsoft/playwright)
   - :rotating_light: test: add tests
   - :recycle: chore: add [GitHub Actions](https://github.com/ElclarkCodes/Elclark/actions)
