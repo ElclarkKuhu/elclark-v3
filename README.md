@@ -9,6 +9,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 - v0.4.3:
 
+  - :bug: fix: navigation padding & margin
   - :recycle: chore: update GitHub Link
 
 - v0.4.2 - 06/19/2022

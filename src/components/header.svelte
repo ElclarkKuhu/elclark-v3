@@ -165,19 +165,6 @@
 		margin: var(--xsmall) 0;
 	}
 
-	nav a:last-child {
-		padding: var(--xsmall) var(--medium);
-		box-shadow: currentColor 0 0 0 0.1rem;
-
-		transition: all 200ms ease;
-	}
-
-	nav a:last-child:hover,
-	nav a:last-child:focus {
-		box-shadow: var(--color-primary) 0 0 0 0.1rem;
-		color: var(--color-primary);
-	}
-
 	a {
 		transition: all 300ms ease;
 		border-radius: var(--xxsmall);
@@ -204,7 +191,9 @@
 		}
 
 		nav a {
+			width: auto;
 			height: auto;
+			padding: var(--xsmall) var(--xxsmall);
 		}
 
 		.left a {
@@ -218,6 +207,19 @@
 
 		button {
 			display: none;
+		}
+
+		nav a:last-child {
+			padding: var(--xsmall) var(--small);
+			box-shadow: currentColor 0 0 0 0.1rem;
+
+			transition: all 200ms ease;
+		}
+
+		nav a:last-child:hover,
+		nav a:last-child:focus {
+			box-shadow: var(--color-primary) 0 0 0 0.1rem;
+			color: var(--color-primary);
 		}
 	}
 
