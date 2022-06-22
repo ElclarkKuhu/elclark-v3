@@ -16,6 +16,11 @@ test('Checking Contact', async ({ page }) => {
 })
 
 test('Checking Blog', async ({ page }) => {
+	await page.goto('/blog')
+	expect(await page.textContent('h1')).toBe('Blog Posts')
+})
+
+test('Checking Blog Post', async ({ page }) => {
 	await page.goto('/blog/welcome')
 	expect(await page.textContent('h1')).toBe('Welcome to Elclark Blog!')
 })
