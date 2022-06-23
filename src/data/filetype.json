@@ -1,0 +1,50 @@
+[
+	{
+		"extension": "zip",
+		"mime": "application/zip",
+		"about": {
+			"title": "ZIP Archive (.zip)",
+			"description": "ZIP is an archive file format that supports lossless data compression. A ZIP file may contain one or more files or directories that may have been compressed. The ZIP file format permits a number of compression algorithms, though DEFLATE is the most common. This format was originally created in 1989 and was first implemented in PKWARE, Inc.'s PKZIP utility, as a replacement for the previous ARC compression format by Thom Henderson. The ZIP format was then quickly supported by many software utilities other than PKZIP. Microsoft has included built-in ZIP support (under the name \"compressed folders\") in versions of Microsoft Windows since 1998 via the \"Windows Plus!\" addon for Windows 98. Native support was added as of the year 2000 in Windows ME. Apple has included built-in ZIP support in Mac OS X 10.3 (via BOMArchiveHelper, now Archive Utility) and later. Most free operating systems have built in support for ZIP in similar manners to Windows and Mac OS X."
+		}
+	},
+	{
+		"extension": "png",
+		"mime": "image/png",
+		"about": {
+			"title": "PNG Image (.png)",
+			"description": "PNG is short for Portable Network Graphic, a type of raster image file. It’s particularly popular file type with web designers because it can handle graphics with transparent or semi-transparent backgrounds. The file format isn’t patented, so you can open a PNG using any image editing software without the need for licensing."
+		}
+	},
+	{
+		"extension": "jpg",
+		"mime": "image/jpeg",
+		"about": {
+			"title": "JPEG Image (.jpg)",
+			"description": "JPG is a digital image format which contains compressed image data. With a 10:1 compression ratio JPG images are very compact. JPG format contains important image details. This format is the most popular image format for sharing photos and other images on the internet and between Mobile and PC users. The small file size of JPG images allows storing of thousands of images in small memory space. JPG images are also widely used for printing and editing purposes. Images edited with CorelDRAW are mostly stored in JPG format."
+		}
+	},
+	{
+		"extension": "gif",
+		"mime": "image/gif",
+		"about": {
+			"title": "GIF Image (.gif)",
+			"description": "GIF, in full graphics interchange format, digital file format devised in 1987 by the Internet service provider CompuServe as a means of reducing the size of images and short animations. Because GIF is a lossless data compression format, meaning that no information is lost in the compression, it quickly became a popular format for transmitting and storing graphic files."
+		}
+	},
+	{
+		"extension": "mp3",
+		"mime": "audio/mpeg",
+		"about": {
+			"title": "MP3 Audio (.mp3)",
+			"description": "MP3 is a coding format for digital audio developed largely by the Fraunhofer Society in Germany, with support from other digital scientists in the United States and elsewhere. Originally defined as the third audio format of the MPEG-1 standard, it was retained and further extended defining additional bit-rates and support for more audio channels as the third audio format of the subsequent MPEG-2 standard. A third version, known as MPEG 2.5 extended to better support lower bit rates is commonly implemented, but is not a recognized standard."
+		}
+	},
+	{
+		"extension": "mp4",
+		"mime": "video/mp4",
+		"about": {
+			"title": "MP4 Video (.mp4)",
+			"description": ""
+		}
+	}
+]

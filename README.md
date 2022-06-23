@@ -9,6 +9,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 - v0.4.3:
 
+  - :new: feat: update file pages
   - :bug: fix: navigation padding & margin
   - :rotating_light: test: add test for blog
   - :recycle: chore: update GitHub Link
