@@ -4,8 +4,11 @@
 	import { onDestroy } from 'svelte'
 	import bytesToSize from '$lib/bytesToSize'
 
+	import File from '$components/icons/file.svelte'
+
 	export let file
-	export let author
+	// export let author
+	export let filetype
 
 	let createdAt = moment(file.createdAt).fromNow()
 	let Loop = setInterval(() => {
@@ -66,88 +69,131 @@
 	<meta name="twitter:card" content="summary" />
 </svelte:head>
 
+<!-- https://www.behance.net/gallery/117082073/Say-Hello-Filetypes-%28FREE-icon-set%29 -->
+
 <main>
-	<div class="info">
-		<h2 class="filename">{file.name}</h2>
-		<a href="/profiles/{author.username}" class="author">
-			{author.firstName}
-			{author.lastName}
-		</a>
-		-
-		<span class="size">{bytesToSize(file.size)}</span> -
-		<span class="date">Uploaded {createdAt}</span>
+	<div class="content">
+		<div class="card">
+			<div>
+				<div class="image">
+					<File />
+				</div>
+				<div class="info">
+					<h1>{file.name}</h1>
+					<p>{bytesToSize(file.size)}</p>
+				</div>
+			</div>
+
+			<div>
+				<a href={file.download}>DOWNLOAD</a>
+			</div>
+		</div>
+
+		<div class="about-format">
+			<h2>{filetype.about.title}</h2>
+			<p>{filetype.about.description}</p>
+		</div>
 	</div>
-	<!-- <Button href={file.url} color="tertiary">Download</Button> -->
+	<div class="sidebar">
+		<div class="ad">Advertisement</div>
+	</div>
 </main>
 
 <style>
 	main {
+		display: grid;
+		grid-gap: var(--medium);
+		grid-template-columns: 1fr 20rem;
+
 		margin: var(--xxxlarge) auto;
 		padding: 0 var(--container-padding);
 		max-width: var(--max-width);
 	}
 
-	.info {
-		background: var(--color-tertiary);
-		border-radius: var(--medium);
-		padding: 1rem 1.5rem;
-		color: var(--color-on-tertiary);
-	}
-
-	.info .filename {
-		margin: 0;
-		margin-bottom: 0.5rem;
-
-		font-size: 1.5rem;
-		font-weight: 500;
-
-		color: var(--color-on-tertiary);
-
-		font-weight: bold;
-	}
-
-	.info .author {
-		display: inline-block;
-
-		padding: 0.25rem 0.5rem;
-		border-radius: 1rem;
-		text-decoration: none;
-
-		background: var(--color-tertiary-container);
-		color: var(--color-on-tertiary-container);
-
-		position: relative;
-	}
-
-	.info .author::after {
-		content: '';
-		display: block;
+	.card {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
 
 		width: 100%;
+		height: max-content;
+
+		background: var(--color-on-surface-a10);
+		border-radius: var(--small);
+	}
+
+	.card div:nth-child(1) {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
 		height: 100%;
-
-		top: 0;
-		left: 0;
-		position: absolute;
-
-		opacity: 0;
-		background: #fff;
-		border-radius: 1rem;
-
-		transition: opacity 200ms ease;
+		margin: 0 var(--small);
 	}
 
-	.info .author:hover::after {
-		opacity: 0.2;
+	.image {
+		margin: var(--small);
 	}
 
-	.info span {
-		padding: 0.1rem 0;
+	.info h1 {
+		font-size: var(--large);
+		font-weight: var(--bold);
+		margin: 0 0 var(--xxsmall) 0;
 	}
 
-	main {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-gap: var(--small);
+	.info p {
+		font-size: var(--medium);
+		font-weight: var(--normal);
+		margin: 0;
+	}
+
+	a {
+		font-weight: var(--bold);
+		margin: 1.5rem;
+		padding: 1rem 2rem;
+		border-radius: var(--xxsmall);
+
+		background: var(--color-primary);
+		color: var(--color-on-primary);
+		text-decoration: none;
+	}
+
+	a:hover {
+		background: var(--color-primary-container);
+		color: var(--color-on-primary-container);
+
+		cursor: pointer;
+		box-shadow: none;
+		filter: none;
+	}
+
+	.about-format {
+		padding: var(--large);
+	}
+
+	.about-format h2 {
+		font-size: var(--large);
+		font-weight: var(--bold);
+		margin: 0 0 var(--small) 0;
+	}
+
+	.about-format p {
+		font-size: 0.9rem;
+		font-weight: var(--normal);
+		line-height: var(--large);
+		margin: 0;
+	}
+
+	.ad {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 100%;
+		aspect-ratio: 1;
+		background: var(--color-primary);
+		color: var(--color-on-primary);
+		border-radius: var(--small);
 	}
 </style>
