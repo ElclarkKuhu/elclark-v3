@@ -11,6 +11,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
   - :new: feat: update file pages
   - :bug: fix: navigation padding & margin
+  - :bug: fix: return 404 when blog not found
   - :rotating_light: test: add test for blog
   - :recycle: chore: update GitHub Link
 
