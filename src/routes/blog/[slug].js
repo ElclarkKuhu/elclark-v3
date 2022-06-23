@@ -9,10 +9,22 @@ export async function get({ params }) {
 		}
 	}
 
+	let more = []
+	data.forEach((post) => {
+		if (post.slug !== params.slug) {
+			more.push({
+				slug: post.slug,
+				title: post.title
+			})
+		}
+	})
+
+	more = more.slice(0, 5)
+
 	return {
 		body: {
 			blog,
-			more: data.filter((post) => post.slug !== params.slug).slice(0, 5)
+			more
 		}
 	}
 }

@@ -10,6 +10,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 - v0.4.3:
 
   - :new: feat: update file pages
+  - :new: feat: only return nesessary data
   - :bug: fix: navigation padding & margin
   - :bug: fix: return 404 when blog not found
   - :rotating_light: test: add test for blog
