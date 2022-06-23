@@ -7,7 +7,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 ## Changlogs
 
-- v0.4.3:
+- v0.4.3 - 24/06/2022
 
   - :new: feat: update file pages
   - :new: feat: only return nesessary data
@@ -16,7 +16,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
   - :rotating_light: test: add test for blog
   - :recycle: chore: update GitHub Link
 
-- v0.4.2 - 06/19/2022
+- v0.4.2 - 19/06/2022
 
   - :art: style: reformat codes
   - :new: feat: add all blog posts
@@ -35,12 +35,12 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
   - :bug: fix: broken padding for small device
   - :bug: fix: hide ad template
 
-- v0.4.1 - 06/19/2022
+- v0.4.1 - 19/06/2022
 
   - :new: feat: Update Error Page.
   - :new: feat: Update Blog title Margin.
 
-- v0.4.0 - 06/19/2022
+- v0.4.0 - 19/06/2022
 
   - :new: feat: UI Overhaul.
   - :new: feat: Add blog.
@@ -50,7 +50,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
   - :recycle: chore: Bug fixes & minor changes.
   - :x: Drop Contentful.
 
-- v0.3.0 - 05/25/2022
+- v0.3.0 - 25/05/2022
 
   - :x: Removed `/admin`
   - :x: Removed `/login`
@@ -64,22 +64,22 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
   - :recycle: chore: Bump dependencies to latest versions
   - :recycle: chore: Minor SEO & UX changes
 
-- v0.2.5 - 05/04/2022
+- v0.2.5 - 04/05/2022
 
   - :recycle: chore: Cleanup & Refactor Code.
   - :recycle: chore: Performance Improvements.
   - :recycle: chore: Move & Rewrite All endpoints to [ElclarkKuhu/Elclark-API](https://github.com/ElclarkKuhu/Elclark-API).
   - :new: feat: Use [@sveltejs/adapter-auto](https://github.com/sveltejs/kit/tree/master/packages/adapter-auto).
 
-- v0.2.4 - 04/16/2022
+- v0.2.4 - 16/04/2022
 
   - :recycle: chore: Performance Optimization
 
-- v0.2.3 - 04/16/2022
+- v0.2.3 - 16/04/2022
 
   - :recycle: chore: SEO Optimization
 
-- v0.2.2 - 04/15/2022
+- v0.2.2 - 15/04/2022
   - :new: feat: Add Login with username and password
   - :recycle: chore: Code optimizations
   - :recycle: chore: Minor Bug Fixes
