@@ -11,6 +11,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
   - :new: feat: make file pages responsive
   - :new: feat: add close button to mobile navigation
+  - :new: feat: animate close button
 
 - v0.4.3 - 24/06/2022
 

@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte'
-	import { slide } from 'svelte/transition'
+	import { fade, slide } from 'svelte/transition'
 
 	import Elclark from '$components/icons/elclark.svelte'
 	import Menu from '$components/icons/menu.svelte'
@@ -37,7 +37,7 @@
 
 		{#if navOpen}
 			<nav class="mobile" on:click={toggleNav} transition:slide style:height>
-				<div class="close">
+				<div class="close" transition:fade>
 					<Close size="2rem" />
 				</div>
 				<a href="/about">About</a>
