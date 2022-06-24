@@ -10,6 +10,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 - v0.4.4:
 
   - :new: feat: make file pages responsive
+  - :new: feat: add close button to mobile navigation
 
 - v0.4.3 - 24/06/2022
 
