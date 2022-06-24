@@ -58,7 +58,7 @@
 
 <main>
 	{#each files as file}
-		<a href="/files/{file.slug}">
+		<a href="/file/{file.slug}">
 			<h3>
 				{file.name}
 			</h3>

@@ -1,9 +1,10 @@
 <script>
 	import { onMount } from 'svelte'
-	import { slide } from 'svelte/transition'
+	import { fade, slide } from 'svelte/transition'
 
 	import Elclark from '$components/icons/elclark.svelte'
 	import Menu from '$components/icons/menu.svelte'
+	import Close from '$components/icons/close.svelte'
 
 	let height = '0px'
 	let navOpen = false
@@ -36,6 +37,9 @@
 
 		{#if navOpen}
 			<nav class="mobile" on:click={toggleNav} transition:slide style:height>
+				<div class="close" transition:fade>
+					<Close size="2rem" />
+				</div>
 				<a href="/about">About</a>
 				<a href="https://paypal.me/elclarkkuhu">Support</a>
 				<a href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
@@ -174,6 +178,12 @@
 	a:focus-visible {
 		outline: none;
 		box-shadow: var(--color-primary) 0 0 0 0.1rem;
+	}
+
+	.close {
+		position: absolute;
+		top: var(--large);
+		right: var(--large);
 	}
 
 	@media (min-width: 768px) {

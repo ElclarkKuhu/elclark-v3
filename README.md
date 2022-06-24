@@ -7,6 +7,14 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 ## Changlogs
 
+- v0.4.4:
+
+  - :new: feat: make file pages responsive
+  - :new: feat: add close button to mobile navigation
+  - :new: feat: animate close button
+  - :art: style: move `/files/*` to `/file/*`
+  - :bug: fix: invaild links in `/file/`
+
 - v0.4.3 - 24/06/2022
 
   - :new: feat: update file pages
