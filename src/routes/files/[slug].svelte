@@ -74,7 +74,7 @@
 <main>
 	<div class="content">
 		<div class="card">
-			<div>
+			<div class="left">
 				<div class="image">
 					<File />
 				</div>
@@ -84,7 +84,7 @@
 				</div>
 			</div>
 
-			<div>
+			<div class="right">
 				<a href={file.download}>DOWNLOAD</a>
 			</div>
 		</div>
@@ -103,37 +103,40 @@
 	main {
 		display: grid;
 		grid-gap: var(--medium);
-		grid-template-columns: 1fr 20rem;
+		grid-template-columns: 1fr;
 
-		margin: var(--xxxlarge) auto;
+		margin: var(--xlarge) auto;
 		padding: 0 var(--container-padding);
 		max-width: var(--max-width);
 	}
 
 	.card {
 		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
 
 		width: 100%;
 		height: max-content;
+		padding: var(--medium);
 
 		background: var(--color-on-surface-a10);
 		border-radius: var(--small);
 	}
 
-	.card div:nth-child(1) {
+	.left {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		height: 100%;
-		margin: 0 var(--small);
+		margin-bottom: var(--medium);
 	}
 
 	.image {
-		margin: var(--small);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: var(--small);
 	}
 
 	.info h1 {
@@ -148,10 +151,15 @@
 		margin: 0;
 	}
 
+	.right {
+		width: 100%;
+	}
+
 	a {
+		width: 100%;
+		text-align: center;
 		font-weight: var(--bold);
-		margin: 1.5rem;
-		padding: 1rem 2rem;
+		padding: var(--medium) var(--xxlarge);
 		border-radius: var(--xxsmall);
 
 		background: var(--color-primary);
@@ -195,5 +203,27 @@
 		background: var(--color-primary);
 		color: var(--color-on-primary);
 		border-radius: var(--small);
+	}
+
+	@media (min-width: 768px) {
+		main {
+			grid-template-columns: 70% auto;
+		}
+
+		.card {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+		}
+
+		.left {
+			height: 100%;
+			margin-bottom: 0;
+		}
+
+		.right {
+			width: auto;
+		}
 	}
 </style>
