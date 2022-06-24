@@ -102,7 +102,6 @@
 <style>
 	main {
 		display: grid;
-		grid-gap: var(--medium);
 		grid-template-columns: 1fr;
 
 		margin: var(--xlarge) auto;
@@ -205,11 +204,17 @@
 		border-radius: var(--small);
 	}
 
-	@media (min-width: 768px) {
-		main {
-			grid-template-columns: 70% auto;
-		}
+	.sidebar {
+		padding: 0 var(--medium);
+	}
 
+	@media (min-width: 600px) {
+		.sidebar {
+			display: none;
+		}
+	}
+
+	@media (min-width: 768px) {
 		.card {
 			flex-direction: row;
 			align-items: center;
@@ -224,6 +229,15 @@
 
 		.right {
 			width: auto;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		main {
+			grid-template-columns: auto 20rem;
+		}
+		.sidebar {
+			display: unset;
 		}
 	}
 </style>
