@@ -1,7 +1,7 @@
 {
 	"name": "elclark",
 	"author": "Elclark <mail@elclark.my.id>",
-	"version": "0.4.3",
+	"version": "0.4.4",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
