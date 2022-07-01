@@ -69,8 +69,12 @@
 		<p><i>{description}</i></p>
 
 		<div class="info">
-			<span>By {author}</span>
-			<div class="date">{moment(createdAt).calendar()}</div>
+			By <a href="/">{author}</a> -
+			{#if updatedAt === createdAt}
+				<div class="date">{moment(createdAt).calendar()}</div>
+			{:else}
+				Updated <div class="date">{moment(updatedAt).calendar()}</div>
+			{/if}
 		</div>
 		<hr />
 	</header>
@@ -82,7 +86,10 @@
 			<slot />
 		</article>
 		<div class="sidebar">
-			<!-- Soon -->
+			<div class="ad">
+				<div class="temp" />
+				<p>Advertisement</p>
+			</div>
 		</div>
 	</div>
 
@@ -94,7 +101,7 @@
 
 <style>
 	.container {
-		--margin: var(--xlarge);
+		--margin: 0.9375rem;
 
 		font-family: var(--font-blog);
 		font-size: var(--xlarge);
@@ -129,10 +136,9 @@
 	}
 
 	p {
-		margin: 0;
 		font-size: 1.25rem;
-		/* margin-bottom: var(--medium); */
-		margin: var(--small) 0;
+		margin-top: 0.625rem;
+		margin-bottom: 0.75rem;
 	}
 
 	.info {
@@ -142,19 +148,43 @@
 		color: #848484;
 	}
 
-	.info span {
-		/* font-family: var(--font); */
-		font-weight: var(--normal);
+	.info a {
+		font-family: var(--font);
+		font-weight: var(--xxnormal);
 		color: var(--color-primary);
+		opacity: 0.8;
 	}
 
 	.date {
 		display: inline;
 	}
 
+	.sidebar {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.ad p {
+		font-size: 0.875rem;
+		font-weight: var(--thin);
+		letter-spacing: 0.075rem;
+		color: var(--color-on-background);
+		text-align: center;
+	}
+
+	.temp {
+		width: 18.75rem;
+		height: 18.75rem;
+
+		opacity: 0.5;
+
+		background: var(--color-primary);
+		border-radius: var(--xxsmall);
+	}
+
 	:global(img) {
 		width: 100%;
-		/* border-radius: var(--xsmall); */
 	}
 
 	:global(h2) {
@@ -179,6 +209,10 @@
 	}
 
 	@media (min-width: 1024px) {
+		.container {
+			--margin: 1.25rem;
+		}
+
 		.wrapper {
 			display: grid;
 			grid-gap: var(--xlarge);
