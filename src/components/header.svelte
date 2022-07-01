@@ -207,8 +207,9 @@
 		}
 
 		.left a {
-			padding: var(--xxsmall) var(--xsmall);
-			border-radius: 2rem 0.25rem 0.25rem 2rem;
+			padding: 0;
+			padding-right: 0.15rem;
+			border-radius: var(--xxlarge) var(--xxsmall) var(--xxsmall) var(--xxlarge);
 		}
 
 		.left span {

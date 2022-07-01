@@ -10,6 +10,166 @@
 </div>
 
 <style>
+	:global(*) {
+		box-sizing: border-box;
+	}
+
+	:global(html) {
+		margin: 0;
+		padding: 0;
+
+		font-size: 16px;
+	}
+
+	:global(body) {
+		margin: 0;
+		padding: 0;
+		position: relative;
+
+		font-family: var(--font);
+		font-size: var(--font-size);
+		font-weight: var(--normal);
+
+		background-color: var(--color-background);
+		color: var(--color-on-background);
+	}
+
+	:global(a) {
+		display: inline-block;
+		color: #8ab4f8;
+		text-decoration: none;
+		transition: all 200ms ease;
+	}
+
+	:global(a:hover) {
+		filter: drop-shadow(0 0 0.15rem currentColor);
+	}
+
+	:root {
+		--font: 'Outfit', sans-serif;
+		--font-blog: 'Roboto', sans-serif;
+		--font-size: 16px;
+
+		--xthin: 200;
+		--thin: 300;
+		--normal: 400;
+		--xnormal: 500;
+		--xxnormal: 600;
+		--bold: 700;
+		--xbold: 800;
+
+		--xxsmall: 0.25rem;
+		--xsmall: 0.5rem;
+		--small: 0.75rem;
+		--medium: 1rem;
+		--large: 1.25rem;
+		--xlarge: 1.5rem;
+		--xxlarge: 2rem;
+		--xxxlarge: 3rem;
+
+		--header-height: 5rem;
+		--max-width: 1280px;
+		--container-padding: 1rem;
+
+		color-scheme: dark;
+
+		--color-primary: #ffb3b3;
+		--color-on-primary: #60131a;
+		--color-on-primary-a10: #60131a50;
+
+		--color-primary-container: #7d2a2e;
+		--color-on-primary-container: #ffd9d9;
+
+		--color-secondary: #e6bdbc;
+		--color-on-secondary: #442929;
+
+		--color-secondary-container: #5d3f3f;
+		--color-on-secondary-container: #ffdad9;
+
+		--color-tertiary: #e4c18d;
+		--color-on-tertiary: #422c05;
+
+		--color-tertiary-container: #5b431a;
+		--color-on-tertiary-container: #ffddaa;
+
+		--color-error: #ffb4a9;
+		--color-on-error: #680003;
+
+		--color-error-container: #930006;
+		--color-on-error-container: #ffdad4;
+
+		--color-outline: #a08c8b;
+		--color-background: #201a1a;
+		--color-on-background: #ede0df;
+
+		--color-surface: #201a1a;
+		--color-on-surface: #ede0df;
+		--color-on-surface-a10: #ede0df10;
+
+		--color-surface-variant: #524343;
+		--color-on-surface-variant: #d8c2c1;
+
+		--color-inverse-surface: #ede0df;
+		--color-inverse-on-surface: #201a1a;
+	}
+
+	@media (min-width: 480px) {
+		:root {
+			--container-padding: 2rem;
+		}
+	}
+
+	@media (min-width: 768px) {
+		:root {
+			--container-padding: 3rem;
+		}
+	}
+
+	@media (prefers-color-scheme: light) {
+		:root {
+			color-scheme: light;
+
+			--color-primary: #9c4043 !important;
+			--color-on-primary: #ffffff !important;
+			--color-on-primary-a10: #ffffff50 !important;
+
+			--color-primary-container: #ffd9d9 !important;
+			--color-on-primary-container: #400007 !important;
+
+			--color-secondary: #765655 !important;
+			--color-on-secondary: #ffffff !important;
+
+			--color-secondary-container: #ffdad9 !important;
+			--color-on-secondary-container: #2c1515 !important;
+
+			--color-tertiary: #745a2f !important;
+			--color-on-tertiary: #ffffff !important;
+
+			--color-tertiary-container: #ffddaa !important;
+			--color-on-tertiary-container: #281800 !important;
+
+			--color-error: #ba1b1b !important;
+			--color-on-error: #ffffff !important;
+
+			--color-error-container: #ffdad4 !important;
+			--color-on-error-container: #410001 !important;
+
+			--color-outline: #857372 !important;
+			--color-background: #fcfcfc !important;
+			--color-on-background: #201a1a !important;
+
+			--color-surface: #fcfcfc !important;
+			--color-on-surface: #201a1a !important;
+			--color-on-surface-a10: #201a1a10 !important;
+
+			--color-surface-variant: #f4dddc !important;
+			--color-on-surface-variant: #524343 !important;
+
+			--color-inverse-surface: #362f2f !important;
+			--color-inverse-on-surface: #fbeeed !important;
+		}
+	}
+
 	.container {
 		position: relative;
 	}

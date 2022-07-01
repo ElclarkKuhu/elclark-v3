@@ -2,54 +2,49 @@
 	import { page } from '$app/stores'
 	import moment from 'moment'
 
-	export let layout
-
 	export let title
-	export let author
 	export let createdAt
 	export let updatedAt
-	export let description
 	export let featuredImage
+
+	let description =
+		"I'm a software engineer and system administrator from Manado, Indonesia. I also a university student and UI/UX designer. I'm passionate about technology, science, music, and gaming."
+	const image = 'https://elclark.my.id/img/brand/elclark.png'
 </script>
 
 <svelte:head>
 	<!-- Metadata -->
-	<title>{title}</title>
+	<title>Elclark - {title}</title>
 	<link rel="canonical" href={$page.url.href} />
 
 	<!-- Basic HTML Meta Tags -->
 	<meta
 		name="keywords"
-		content="Elclark, Code, software engineer, technology, programming, science, music, gaming"
+		content="Elclark, Code, software engineer, technology, programming, science, music, gaming, privacy, policy"
 	/>
 	<meta name="description" content={description} />
-	<meta name="subject" content={title} />
+	<meta name="subject" content="Elclark {title}" />
 	<meta name="copyright" content="Elclark" />
 	<meta name="language" content="EN" />
 	<meta name="robots" content="index,follow" />
+
 	<meta name="author" content="Elclark, founder@elclark.my.id" />
 	<meta name="designer" content="Elclark, founder@elclark.my.id" />
 	<meta name="owner" content="Elclark" />
 	<meta name="url" content={$page.url.href} />
 	<meta name="identifier-URL" content={$page.url.origin} />
-	<meta name="category" content="technology, portfolio, blog, contact" />
+	<meta name="category" content="technology, portfolio, blog" />
 	<meta name="coverage" content="Worldwide" />
 	<meta name="distribution" content="Global" />
 	<meta name="rating" content="General" />
 
 	<!-- OpenGraph Meta Tags -->
 	<meta name="og:title" content={title} />
-	<meta name="og:type" content="article" />
+	<meta name="og:type" content="website" />
 	<meta name="og:url" content={$page.url.href} />
-	<meta name="og:image" content={featuredImage} />
+	<meta name="og:image" content={image} />
 	<meta name="og:site_name" content="Elclark" />
 	<meta name="og:description" content={description} />
-
-	<meta name="article:published_time" content={createdAt} />
-	<meta name="article:modified_time" content={updatedAt} />
-	<meta name="article:author" content="Elclark" />
-	<meta name="article:section" content="Technonlgy" />
-	<meta name="article:tag" content="Elclark, Technonlgy, Programming" />
 
 	<meta name="og:email" content="mail@elclark.my.id" />
 	<meta name="og:region" content="MDO" />
@@ -58,39 +53,36 @@
 	<!-- Twitter Metadata -->
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<meta name="twitter:url" content={featuredImage} />
+	<meta name="twitter:url" content={image} />
 	<meta name="twitter:card" content="summary" />
 </svelte:head>
 
 <div class="container">
-	<header>
-		<a href="/" class="category">{layout}</a>
-		<h1>{title}</h1>
-		<p><i>{description}</i></p>
-
-		<div class="info">
-			By <a href="/">{author}</a> -
-			{#if updatedAt === createdAt}
-				<time datetime={createdAt}>{moment(createdAt).calendar()}</time>
-			{:else}
-				Updated <time datetime={updatedAt}>{moment(updatedAt).calendar()}</time>
-			{/if}
-		</div>
-		<hr />
-	</header>
 	<div class="wrapper">
-		<article>
-			{#if featuredImage}
-				<img src={featuredImage} alt={title} />
+		{#if featuredImage}
+			<img src={featuredImage} alt={title} />
+		{:else}
+			<div class="nothing">
+				<!-- Nothing -->
+			</div>
+		{/if}
+
+		<header>
+			<h1>{title}</h1>
+
+			{#if createdAt || updatedAt}
+				<div class="date">
+					{#if updatedAt === createdAt}
+						<i>Published <time datetime={createdAt}>{moment(createdAt).format('LL')}</time></i>
+					{:else}
+						<i>Updated at <time datetime={updatedAt}>{moment(updatedAt).format('LL')}</time></i>
+					{/if}
+				</div>
 			{/if}
+		</header>
+		<article>
 			<slot />
 		</article>
-		<div class="sidebar">
-			<div class="ad">
-				<div class="temp" />
-				<p>Advertisement</p>
-			</div>
-		</div>
 	</div>
 
 	<link
@@ -112,71 +104,29 @@
 	}
 
 	.wrapper {
-		display: grid;
-		grid-gap: var(--xlarge);
-		grid-template-columns: 1fr;
+		max-width: 724px;
 	}
 
 	header {
 		margin-top: var(--xlarge);
 	}
 
-	.category {
-		font-size: var(--medium);
-		font-weight: var(--bold);
-		margin-bottom: var(--medium);
-		color: var(--color-primary);
-		text-transform: uppercase;
-	}
-
 	h1 {
 		font-family: var(--font);
-		font-size: 1.875rem;
+		font-size: 2.75rem;
+		font-weight: var(--normal);
 		margin: 0;
 	}
 
-	p {
+	.date {
 		font-size: 1.25rem;
 		margin-top: 0.625rem;
-		margin-bottom: 0.75rem;
-	}
-
-	.info {
-		font-size: 0.875rem;
 		font-weight: var(--thin);
 		word-spacing: 0.1rem;
-		color: #848484;
 	}
 
-	.info a {
-		font-family: var(--font);
-		font-weight: var(--xxnormal);
-		color: var(--color-primary);
-		opacity: 0.8;
-	}
-
-	.sidebar {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.ad p {
-		font-size: 0.875rem;
-		font-weight: var(--thin);
-		letter-spacing: 0.075rem;
-		color: var(--color-on-background);
-		text-align: center;
-	}
-
-	.temp {
-		width: 18.75rem;
-		height: 18.75rem;
-
-		opacity: 0.5;
-
-		background: var(--color-primary);
-		border-radius: var(--xxsmall);
+	.nothing {
+		padding-top: var(--container-padding);
 	}
 
 	:global(img) {
@@ -185,17 +135,26 @@
 
 	:global(h2) {
 		font-size: var(--xxlarge);
+		font-weight: var(--thin);
 		margin: var(--margin) 0;
 	}
 
 	:global(h3) {
 		font-size: var(--xlarge);
+		font-weight: var(--normal);
 		margin: var(--margin) 0;
 	}
 
 	:global(p) {
 		font-size: 1.125rem;
+		font-weight: var(--thin);
 		margin: var(--margin) 0;
+	}
+
+	:global(li) {
+		font-size: 1.125rem;
+		font-weight: var(--thin);
+		margin: 0.35rem 0;
 	}
 
 	:global(hr) {
@@ -208,16 +167,6 @@
 	@media (min-width: 1024px) {
 		.container {
 			--margin: 1.25rem;
-		}
-
-		.wrapper {
-			display: grid;
-			grid-gap: var(--xlarge);
-			grid-template-columns: 1fr 18.75rem;
-		}
-
-		h1 {
-			font-size: 2.75rem;
 		}
 	}
 </style>

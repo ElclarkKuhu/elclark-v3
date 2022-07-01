@@ -8,7 +8,8 @@ export default {
 		mdsvex({
 			extensions: ['.md', '.svx'],
 			layout: {
-				blog: path.resolve('./src/routes/blog/layout.svelte')
+				blog: path.resolve('./src/routes/blog/layout.svelte'),
+				page: path.resolve('./src/layouts/page.svelte')
 			}
 		})
 	],
