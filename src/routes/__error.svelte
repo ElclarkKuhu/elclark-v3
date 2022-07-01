@@ -15,6 +15,10 @@
 	export let error
 </script>
 
+<svelte:head>
+	<title>{status} {error}</title>
+</svelte:head>
+
 <main>
 	<h1>Something went wrong!</h1>
 	<p><code>{error} ({status})</code></p>

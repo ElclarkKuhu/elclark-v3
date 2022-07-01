@@ -2,9 +2,10 @@
 	import { page } from '$app/stores'
 	import moment from 'moment'
 
+	export let layout
+
 	export let title
 	export let author
-	export let category
 	export let createdAt
 	export let updatedAt
 	export let description
@@ -14,7 +15,6 @@
 <svelte:head>
 	<!-- Metadata -->
 	<title>{title}</title>
-	<link rel="icon" href="/favicon.png" />
 	<link rel="canonical" href={$page.url.href} />
 
 	<!-- Basic HTML Meta Tags -->
@@ -64,7 +64,7 @@
 
 <div class="container">
 	<header>
-		<a href="/" class="category">{category}</a>
+		<a href="/" class="category">{layout}</a>
 		<h1>{title}</h1>
 		<p><i>{description}</i></p>
 
@@ -188,7 +188,7 @@
 	}
 
 	:global(h2) {
-		font-size: var(--xlarge);
+		font-size: var(--xxlarge);
 		margin: var(--margin) 0;
 	}
 
