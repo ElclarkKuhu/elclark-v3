@@ -203,9 +203,10 @@
 	}
 
 	:global(hr) {
+		opacity: 0.5;
+		margin: var(--margin) 0;
 		color: var(--color-outline);
 		border-color: var(--color-outline);
-		margin: var(--margin) 0;
 	}
 
 	@media (min-width: 1024px) {

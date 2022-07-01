@@ -33,8 +33,7 @@
 
 		margin: 0 auto;
 		max-width: var(--max-width);
-		padding: var(--header-height) var(--container-padding) var(--container-padding)
-			var(--container-padding);
+		padding: var(--container-padding);
 		background-color: var(--color-background);
 	}
 
