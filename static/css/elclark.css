@@ -1,11 +1,13 @@
 :root {
 	--font: 'Outfit', sans-serif;
+	--font-blog: 'Roboto', sans-serif;
 	--font-size: 16px;
 
 	--xthin: 200;
 	--thin: 300;
 	--normal: 400;
-	--xnormal: 600;
+	--xnormal: 500;
+	--xxnormal: 600;
 	--bold: 700;
 	--xbold: 800;
 

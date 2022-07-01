@@ -110,7 +110,7 @@
 
 		font: var(--font);
 		font-size: var(--xlarge);
-		font-weight: var(--xnormal);
+		font-weight: var(--xxnormal);
 		letter-spacing: 0.05rem;
 		color: currentColor;
 

@@ -1,7 +1,9 @@
 <script>
 	import Card from '$components/blog/card.svelte'
+	import globToArray from '$lib/globToArray'
 
-	export let blogs
+	const modules = import.meta.globEager('./*.md')
+	const blogs = globToArray(modules)
 </script>
 
 <main>
@@ -9,10 +11,10 @@
 	<div class="posts">
 		{#each blogs as blog}
 			<Card
-				href={`/blog/${blog.slug}`}
-				featuredImage={blog.featuredImage}
-				title={blog.title}
-				summary={blog.summary}
+				href={blog.key.replace('./', '/blog/').slice(0, -3)}
+				featuredImage={blog.metadata.featuredImage}
+				title={blog.metadata.title}
+				summary={blog.metadata.description}
 			/>
 		{/each}
 	</div>

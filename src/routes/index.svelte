@@ -64,10 +64,10 @@
 	<div class="posts">
 		{#each blogs as blog}
 			<Card
-				href={`/blog/${blog.slug}`}
+				href={blog.path}
 				featuredImage={blog.featuredImage}
 				title={blog.title}
-				summary={blog.summary}
+				summary={blog.description}
 			/>
 		{/each}
 	</div>

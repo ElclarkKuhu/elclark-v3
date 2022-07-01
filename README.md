@@ -7,6 +7,11 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 ## Changlogs
 
+- v0.4.5 - 1/7/2022
+
+  - :new: use [MDsveX](https://mdsvex.com/)
+  - :new: redesign blog layout
+
 - v0.4.4 - 25/06/2022
 
   - :new: feat: make file pages responsive

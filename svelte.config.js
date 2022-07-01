@@ -1,14 +1,24 @@
 import path from 'path'
+import { mdsvex } from 'mdsvex'
 import adapter from '@sveltejs/adapter-auto'
 
 export default {
+	extensions: ['.svelte', '.md', '.svx'],
+	preprocess: [
+		mdsvex({
+			extensions: ['.md', '.svx'],
+			layout: {
+				blog: path.resolve('./src/routes/blog/layout.svelte')
+			}
+		})
+	],
 	kit: {
 		adapter: adapter(),
 		prerender: {
 			enabled: true,
 			default: true,
 			crawl: true,
-			onError: 'continue'
+			onError: 'fail'
 		},
 		vite: {
 			resolve: {
