@@ -22,5 +22,5 @@ test('Checking Blog', async ({ page }) => {
 
 test('Checking Blog Post', async ({ page }) => {
 	await page.goto('/blog/welcome')
-	expect(await page.textContent('h1')).toBe('Welcome to Elclark Blog!')
+	expect(await page.textContent('h1')).toBe('Welcome to my blog!')
 })
