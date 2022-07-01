@@ -71,9 +71,9 @@
 		<div class="info">
 			By <a href="/">{author}</a> -
 			{#if updatedAt === createdAt}
-				<div class="date">{moment(createdAt).calendar()}</div>
+				{moment(createdAt).calendar()}
 			{:else}
-				Updated <div class="date">{moment(updatedAt).calendar()}</div>
+				Updated {moment(updatedAt).calendar()}
 			{/if}
 		</div>
 		<hr />
@@ -153,10 +153,6 @@
 		font-weight: var(--xxnormal);
 		color: var(--color-primary);
 		opacity: 0.8;
-	}
-
-	.date {
-		display: inline;
 	}
 
 	.sidebar {
