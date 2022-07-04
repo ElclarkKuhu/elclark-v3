@@ -3,75 +3,30 @@
 	import Footer from '$components/footer.svelte'
 </script>
 
-<div class="container">
-	<Header />
-	<slot />
-	<Footer />
-</div>
+<Header />
+<slot />
+<Footer />
 
 <style>
-	:global(*) {
-		box-sizing: border-box;
-	}
-
-	:global(html) {
-		margin: 0;
-		padding: 0;
-
-		font-size: 16px;
-	}
-
-	:global(body) {
-		margin: 0;
-		padding: 0;
-		position: relative;
-
-		font-family: var(--font);
-		font-size: var(--font-size);
-		font-weight: var(--normal);
-
-		background-color: var(--color-background);
-		color: var(--color-on-background);
-	}
-
-	:global(a) {
-		display: inline-block;
-		color: #8ab4f8;
-		text-decoration: none;
-		transition: all 200ms ease;
-	}
-
-	:global(a:hover) {
-		filter: drop-shadow(0 0 0.15rem currentColor);
-	}
-
 	:root {
-		--font: 'Outfit', sans-serif;
-		--font-blog: 'Roboto', sans-serif;
+		--font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+		--font-serif: 'Roboto Serif', ui-serif, Georgia, 'Cambria', 'Times New Roman', Times, serif;
+		--font-mono: 'Roboto Mono', ui-monospace, 'Menlo', 'Consolas', monospace;
 		--font-size: 16px;
 
-		--xthin: 200;
-		--thin: 300;
-		--normal: 400;
-		--xnormal: 500;
-		--xxnormal: 600;
-		--bold: 700;
-		--xbold: 800;
+		--font-thin: 100;
+		--font-extralight: 200;
+		--font-light: 300;
+		--font-normal: 400;
+		--font-medium: 500;
+		--font-semibold: 600;
+		--font-bold: 700;
+		--font-extrabold: 800;
+		--font-black: 900;
 
-		--xxsmall: 0.25rem;
-		--xsmall: 0.5rem;
-		--small: 0.75rem;
-		--medium: 1rem;
-		--large: 1.25rem;
-		--xlarge: 1.5rem;
-		--xxlarge: 2rem;
-		--xxxlarge: 3rem;
-
-		--header-height: 5rem;
-		--max-width: 1280px;
-		--container-padding: 1rem;
-
-		color-scheme: dark;
+		font-family: var(--font-sans);
+		font-size: var(--font-size);
+		font-weight: var(--font-normal);
 
 		--color-primary: #ffb3b3;
 		--color-on-primary: #60131a;
@@ -111,66 +66,101 @@
 
 		--color-inverse-surface: #ede0df;
 		--color-inverse-on-surface: #201a1a;
-	}
 
-	@media (min-width: 480px) {
-		:root {
-			--container-padding: 2rem;
-		}
-	}
-
-	@media (min-width: 768px) {
-		:root {
-			--container-padding: 3rem;
-		}
+		color-scheme: dark;
+		background: var(--color-background);
+		color: var(--color-on-background);
 	}
 
 	@media (prefers-color-scheme: light) {
 		:root {
+			--color-primary: #9c4043;
+			--color-on-primary: #ffffff;
+			--color-on-primary-a10: #ffffff50;
+
+			--color-primary-container: #ffd9d9;
+			--color-on-primary-container: #400007;
+
+			--color-secondary: #765655;
+			--color-on-secondary: #ffffff;
+
+			--color-secondary-container: #ffdad9;
+			--color-on-secondary-container: #2c1515;
+
+			--color-tertiary: #745a2f;
+			--color-on-tertiary: #ffffff;
+
+			--color-tertiary-container: #ffddaa;
+			--color-on-tertiary-container: #281800;
+
+			--color-error: #ba1b1b;
+			--color-on-error: #ffffff;
+
+			--color-error-container: #ffdad4;
+			--color-on-error-container: #410001;
+
+			--color-outline: #857372;
+			--color-background: #fcfcfc;
+			--color-on-background: #201a1a;
+
+			--color-surface: #fcfcfc;
+			--color-on-surface: #201a1a;
+			--color-on-surface-a10: #201a1a10;
+
+			--color-surface-variant: #f4dddc;
+			--color-on-surface-variant: #524343;
+
+			--color-inverse-surface: #362f2f;
+			--color-inverse-on-surface: #fbeeed;
+
 			color-scheme: light;
-
-			--color-primary: #9c4043 !important;
-			--color-on-primary: #ffffff !important;
-			--color-on-primary-a10: #ffffff50 !important;
-
-			--color-primary-container: #ffd9d9 !important;
-			--color-on-primary-container: #400007 !important;
-
-			--color-secondary: #765655 !important;
-			--color-on-secondary: #ffffff !important;
-
-			--color-secondary-container: #ffdad9 !important;
-			--color-on-secondary-container: #2c1515 !important;
-
-			--color-tertiary: #745a2f !important;
-			--color-on-tertiary: #ffffff !important;
-
-			--color-tertiary-container: #ffddaa !important;
-			--color-on-tertiary-container: #281800 !important;
-
-			--color-error: #ba1b1b !important;
-			--color-on-error: #ffffff !important;
-
-			--color-error-container: #ffdad4 !important;
-			--color-on-error-container: #410001 !important;
-
-			--color-outline: #857372 !important;
-			--color-background: #fcfcfc !important;
-			--color-on-background: #201a1a !important;
-
-			--color-surface: #fcfcfc !important;
-			--color-on-surface: #201a1a !important;
-			--color-on-surface-a10: #201a1a10 !important;
-
-			--color-surface-variant: #f4dddc !important;
-			--color-on-surface-variant: #524343 !important;
-
-			--color-inverse-surface: #362f2f !important;
-			--color-inverse-on-surface: #fbeeed !important;
+			background: var(--color-background);
+			color: var(--color-on-background);
 		}
 	}
 
-	.container {
-		position: relative;
+	:global(*) {
+		box-sizing: border-box;
+	}
+
+	:global(html) {
+		margin: 0;
+		padding: 0;
+	}
+
+	:global(body) {
+		margin: 0;
+		padding: 0;
+	}
+
+	:global(a) {
+		display: inline-block;
+		color: #8ab4f8;
+		text-decoration: none;
+		transition: all 200ms ease;
+	}
+
+	:global(.container) {
+		max-width: auto;
+		margin: 0 auto;
+		padding: 0 var(--container-padding);
+	}
+
+	@media (min-width: 640px) {
+		:global(.container) {
+			max-width: 640px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		:global(.container) {
+			max-width: 768px;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		:global(.container) {
+			max-width: 1024px;
+		}
 	}
 </style>
