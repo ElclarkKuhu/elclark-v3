@@ -1,4 +1,5 @@
 import globToArray from '$lib/globToArray'
+import sort from '$lib/sortArray'
 
 export async function get() {
 	const modules = import.meta.globEager('./blog/*.md')
@@ -14,7 +15,7 @@ export async function get() {
 
 	return {
 		body: {
-			blogs
+			blogs: sort(blogs)
 		}
 	}
 }
