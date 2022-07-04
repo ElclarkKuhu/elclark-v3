@@ -4,15 +4,19 @@
 	import Twitter from '$components/icons/twitter.svelte'
 </script>
 
-<footer>
-	<div class="wrapper">
-		<p>Made and Designed by Elclark Kuhu.</p>
-		<p>
-			Build using <a href="https://kit.svelte.dev/">SvelteKit</a>. Hosted And Protected By
-			<a href="https://cloudflare.com">CloudFlare</a>.
-		</p>
+<footer
+	class="container m-auto flex flex-col px-5 py-8 md:flex-row md:items-center md:justify-between"
+>
+	<div class="font-light leading-5">
+		Made and Designed by <a href="/about" class="font-normal text-primary hover:underline"
+			>Elclark Kuhu</a
+		>.
+		<br />
+		Build using <a href="https://kit.svelte.dev/" class="text-blue-400">SvelteKit</a>, Hosted And
+		Protected By
+		<a href="https://cloudflare.com" class="text-blue-400">CloudFlare</a>.
 	</div>
-	<div class="socials">
+	<div class="grid w-max grid-cols-3 gap-2 pt-4 md:pt-0">
 		<a href="https://twitter.com/elclark_kuhu/" aria-label="Twitter">
 			<Twitter size="2rem" />
 		</a>
@@ -26,55 +30,4 @@
 </footer>
 
 <style>
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-
-		margin: 0 auto;
-		max-width: var(--max-width);
-		padding: var(--container-padding);
-		background-color: var(--color-background);
-	}
-
-	.wrapper {
-		padding: var(--xxsmall);
-		margin-bottom: var(--large);
-	}
-
-	.socials {
-		display: flex;
-		align-items: center;
-	}
-
-	.socials a {
-		display: flex;
-		padding: var(--xsmall);
-		color: var(--color-on-background);
-		text-decoration: none;
-
-		transition: all 200ms ease-in-out;
-	}
-
-	.socials a:hover {
-		color: var(--color-primary);
-		filter: drop-shadow(0 0 0.15rem currentColor);
-	}
-
-	p {
-		font-size: 0.9rem;
-		margin: var(--xxsmall) 0;
-		opacity: 0.9;
-	}
-
-	@media (min-width: 768px) {
-		footer {
-			flex-direction: row;
-			justify-content: space-between;
-		}
-
-		p {
-			font-size: 0.95rem;
-		}
-	}
 </style>

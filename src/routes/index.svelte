@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores'
+	import moment from 'moment'
 
 	import Card from '$components/blog/card.svelte'
 	import Hero from '$components/hero.svelte'
@@ -10,6 +11,25 @@
 	const image = 'https://elclark.my.id/img/brand/elclark.png'
 
 	export let blogs
+
+	function formatDate(date) {
+		const nowDate = new Date(date).getTime()
+		const aYearAgo = nowDate - 365 * 24 * 60 * 60 * 1000
+
+		if (nowDate > aYearAgo) {
+			return moment(date).format('DD MMMM')
+		} else {
+			return moment(date).format('DD MMMM, YYYY')
+		}
+	}
+
+	function getDate(createdAt, updatedAt) {
+		if (updatedAt && createdAt === updatedAt) {
+			return formatDate(createdAt)
+		} else {
+			return 'Updated at ' + formatDate(updatedAt)
+		}
+	}
 </script>
 
 <svelte:head>
@@ -58,51 +78,20 @@
 </svelte:head>
 
 <Hero />
-<main>
-	<span class="top-edge" />
-	<div class="posts">
+<main class="container mx-auto p-5">
+	<div class="grid gap-2">
 		{#each blogs as blog}
 			<Card
 				href={blog.path}
+				featured={blog.featured}
 				featuredImage={blog.featuredImage}
 				title={blog.title}
 				summary={blog.description}
+				date={getDate(blog.createdAt, blog.updatedAt)}
 			/>
 		{/each}
 	</div>
 </main>
 
 <style>
-	main {
-		position: relative;
-
-		margin: 0 auto 0 auto;
-		padding: 0 var(--container-padding);
-		max-width: var(--max-width);
-
-		background: var(--color-background);
-	}
-
-	.posts {
-		display: grid;
-		grid-gap: var(--small);
-		grid-template-columns: repeat(1, 1fr);
-		margin: var(--large) auto 0 auto;
-	}
-
-	.top-edge {
-		display: block;
-
-		--width: 100%;
-		--height: calc(var(--xxlarge) * 2);
-
-		position: absolute;
-		top: calc(var(--height) * -1);
-		left: 0;
-
-		width: var(--width);
-		height: var(--height);
-
-		background: linear-gradient(to top, var(--color-background) 25%, transparent 100%);
-	}
 </style>
