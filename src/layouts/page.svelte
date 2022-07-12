@@ -93,14 +93,9 @@
 
 <style>
 	.container {
-		--margin: 0.9375rem;
+		--margin: 15px;
 
-		font-family: var(--font-blog);
-		font-size: var(--xlarge);
-
-		max-width: var(--max-width);
-		padding: 0 var(--container-padding);
-		margin: 0 auto;
+		padding: 1.25rem;
 	}
 
 	.wrapper {
@@ -166,7 +161,7 @@
 
 	@media (min-width: 1024px) {
 		.container {
-			--margin: 1.25rem;
+			--margin: 10px;
 		}
 	}
 </style>

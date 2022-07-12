@@ -11,6 +11,7 @@
 
 	function toggleNav() {
 		navOpen = !navOpen
+		height = window.innerHeight + 'px'
 	}
 
 	onMount(() => {
@@ -20,58 +21,66 @@
 			if (navOpen) {
 				height = window.innerHeight + 'px'
 			}
+
+			if (window.innerWidth > 768) {
+				navOpen = false
+				height = '0px'
+			}
 		})
 	})
 </script>
 
-<div class="container">
-	<div class="header">
-		<div class="left">
+<div class="sticky">
+	<div class="container header">
+		<div class="logo">
 			<a href="/">
 				<div class="icon">
-					<Elclark size="2rem" />
+					<Elclark size="2.25rem" />
 				</div>
 				<span>Elclark</span>
 			</a>
 		</div>
 
+		<button aria-label="Menu" type="button" on:click={toggleNav}>
+			<Menu size="2.25rem" />
+		</button>
+
 		{#if navOpen}
-			<nav class="mobile" on:click={toggleNav} transition:slide style:height>
-				<div class="close" transition:fade>
-					<Close size="2rem" />
-				</div>
-				<a href="/about">About</a>
-				<a href="https://paypal.me/elclarkkuhu">Support</a>
-				<a href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
-				<a href="/contact">Contact</a>
-			</nav>
+			<div
+				class="mobile-wrapper"
+				on:click={toggleNav}
+				in:slide={{ duration: 400 }}
+				out:slide={{ delay: 100, duration: 400 }}
+				style:height
+			>
+				<nav class="container mobile" in:fade={{ delay: 200 }} out:fade={{ duration: 200 }}>
+					<div class="close">
+						<Close size="2.25rem" />
+					</div>
+					<a href="/about">About</a>
+					<a href="https://paypal.me/elclarkkuhu">Support</a>
+					<a href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
+					<a href="/contact">Contact</a>
+				</nav>
+			</div>
 		{:else}
-			<nav>
+			<nav class="desktop">
 				<a href="/about">About</a>
 				<a href="https://paypal.me/elclarkkuhu">Support</a>
 				<a href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
 				<a href="/contact">Contact</a>
 			</nav>
 		{/if}
-
-		<button aria-label="Menu" on:click={toggleNav}>
-			<Menu size="2rem" />
-		</button>
 	</div>
 </div>
 
 <style>
-	.container {
+	.sticky {
 		position: sticky;
 		top: 0;
 		left: 0;
 
 		z-index: 1;
-
-		width: 100%;
-		height: var(--header-height);
-		background: linear-gradient(to bottom, var(--color-background) 25%, transparent 100%);
-		/* backdrop-filter: blur(1rem); */
 	}
 
 	.header {
@@ -79,50 +88,63 @@
 		align-items: center;
 		justify-content: space-between;
 
-		margin: 0 auto;
-		padding: 0 var(--container-padding);
-		max-width: var(--max-width);
-		height: 100%;
-	}
+		padding: 1rem 1.25rem;
 
-	.left {
-		display: flex;
-		align-items: center;
-
-		color: var(--color-primary);
+		background: linear-gradient(
+			to bottom,
+			var(--c-background) 25%,
+			rgba(var(--r-background), 0) 100%
+		);
+		/* backdrop-filter: blur(1rem); */
 	}
 
 	.icon {
-		display: none;
+		display: flex;
+		margin-right: 0.75rem;
+		filter: drop-shadow(0 0 0.15rem var(--c-primary));
+
+		transition: transform 500ms ease;
 	}
 
-	.left a {
+	.logo {
+		display: flex;
+		align-items: center;
+
+		color: var(--c-primary);
+	}
+
+	.logo a {
 		display: flex;
 		align-items: center;
 		text-decoration: none;
-		padding: var(--xxsmall);
 		color: currentColor;
 	}
 
-	.left span {
-		display: block;
-		height: 100%;
+	.logo a:hover {
+		filter: none;
+	}
 
-		font: var(--font);
-		font-size: var(--xlarge);
-		font-weight: var(--xxnormal);
+	.logo span {
+		display: block;
+		font-size: 1.5rem;
+		font-weight: var(--font-semibold);
 		letter-spacing: 0.05rem;
 		color: currentColor;
 
 		transition: all 200ms ease;
 	}
 
-	a:focus span,
-	a:hover span {
-		padding: 0 var(--xsmall);
+	a:hover span,
+	a:active span {
+		padding: 0 0.5rem;
 
-		background: var(--color-primary);
-		color: var(--color-on-primary);
+		background: var(--c-primary);
+		color: var(--c-on-primary);
+	}
+
+	a:hover .icon,
+	a:active .icon {
+		transform: rotate(180deg);
 	}
 
 	button {
@@ -132,111 +154,133 @@
 
 		border: none;
 		background: none;
+		border-radius: 0.5rem;
 		color: var(--color-primary);
+
+		padding: 0.25rem;
+
+		transition: all 200ms ease;
+	}
+
+	button:hover,
+	button:active {
+		color: var(--c-primary);
+		background: rgba(var(--r-on-background), 0.1);
+		outline: none;
 	}
 
 	nav {
 		display: none;
 	}
 
-	.mobile {
+	.mobile-wrapper {
 		position: absolute;
 		top: 0;
 		left: 0;
+
+		width: 100%;
+		height: 100%;
+
+		z-index: 2;
+
+		background: var(--c-primary);
+		color: var(--c-on-primary);
+	}
+
+	.mobile {
+		position: relative;
 
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
 		width: 100%;
-
-		background: var(--color-primary-container);
-		color: var(--color-on-primary-container);
-	}
-
-	nav a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		width: 75%;
-		height: var(--xxxlarge);
-
-		text-decoration: none;
-		color: currentColor;
-
-		padding: var(--xsmall) var(--xxxsmall);
-		margin: var(--xsmall) 0;
-	}
-
-	a {
-		transition: all 300ms ease;
-		border-radius: var(--xxsmall);
-	}
-
-	a:focus,
-	a:focus-visible {
-		outline: none;
-		box-shadow: var(--color-primary) 0 0 0 0.1rem;
+		height: 100%;
 	}
 
 	.close {
 		position: absolute;
-		top: var(--large);
-		right: var(--large);
+		top: 1rem;
+		right: 1.25rem;
+
+		padding: 0.25rem;
+	}
+
+	.mobile a {
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+
+		min-width: 50%;
+		padding: 1rem;
+		margin: 0.25rem 0;
+		border-radius: 0.25rem;
+		text-align: center;
+
+		background: rgba(var(--r-on-background), 0.5);
+		color: var(--c-on-primary);
+	}
+
+	.mobile a:hover {
+		background: rgba(var(--r-on-background), 0.75);
+		filter: none;
+	}
+
+	.desktop {
+		display: none;
 	}
 
 	@media (min-width: 768px) {
-		.icon {
-			display: flex;
-			align-items: center;
-			filter: drop-shadow(0 0 0.15rem currentColor);
-		}
-
-		nav {
-			display: grid;
-			grid-template-columns: repeat(4, auto);
-			grid-gap: var(--small);
-			color: var(--color-on-background);
-		}
-
-		nav a {
-			width: auto;
-			height: auto;
-			padding: var(--xsmall) var(--xxsmall);
-		}
-
-		.left a {
-			padding: 0;
-			padding-right: 0.15rem;
-			border-radius: var(--xxlarge) var(--xxsmall) var(--xxsmall) var(--xxlarge);
-		}
-
-		.left span {
-			margin-left: var(--medium);
-		}
-
 		button {
 			display: none;
 		}
 
-		nav a:last-child {
-			padding: var(--xsmall) var(--small);
-			box-shadow: currentColor 0 0 0 0.1rem;
-
-			transition: all 200ms ease;
+		.desktop {
+			display: flex;
 		}
 
-		nav a:last-child:hover,
-		nav a:last-child:focus {
-			box-shadow: var(--color-primary) 0 0 0 0.1rem;
-			color: var(--color-primary);
+		.desktop a {
+			color: var(--c-on-background);
+			padding: 0.5rem;
+		}
+
+		.desktop a:last-child {
+			position: relative;
+			overflow: hidden;
+
+			border-radius: 0.25rem;
+			margin-left: 0.5rem;
+			font-weight: var(--font-semibold);
+			background: var(--c-primary);
+			color: var(--c-on-primary);
+
+			transition: all 300ms ease;
+		}
+
+		.desktop a:last-child:hover {
+			position: relative;
+			border-radius: 0.75rem;
+			filter: none;
+		}
+
+		.desktop a:last-child::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: var(--c-background);
+			opacity: 0;
+
+			transition: all 200ms ease 350ms;
+		}
+
+		.desktop a:last-child:hover::before {
+			opacity: 0.1;
 		}
 	}
 
-	/* @media (min-width: 1024px) {
+	@media (min-width: 1024px) {
 	}
-
-	@media (min-width: 1280px) {
-	} */
 </style>

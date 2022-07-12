@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores'
-	import moment from 'moment'
+	import formatDate from '$lib/formatDate'
 
 	import Card from '$components/blog/card.svelte'
 	import Hero from '$components/hero.svelte'
@@ -12,22 +12,19 @@
 
 	export let blogs
 
-	function formatDate(date) {
-		const nowDate = new Date(date).getTime()
-		const aYearAgo = nowDate - 365 * 24 * 60 * 60 * 1000
-
-		if (nowDate > aYearAgo) {
-			return moment(date).format('DD MMMM')
-		} else {
-			return moment(date).format('DD MMMM, YYYY')
-		}
-	}
-
 	function getDate(createdAt, updatedAt) {
-		if (updatedAt && createdAt === updatedAt) {
-			return formatDate(createdAt)
+		if (createdAt) {
+			if (updatedAt) {
+				if (createdAt === updatedAt) {
+					return formatDate(createdAt)
+				} else {
+					return 'Updated ' + formatDate(updatedAt)
+				}
+			} else {
+				return formatDate(createdAt)
+			}
 		} else {
-			return 'Updated at ' + formatDate(updatedAt)
+			return 'Unknown'
 		}
 	}
 </script>
@@ -78,15 +75,15 @@
 </svelte:head>
 
 <Hero />
-<main class="container mx-auto p-5">
-	<div class="grid gap-2">
+<main class="container">
+	<div>
 		{#each blogs as blog}
 			<Card
 				href={blog.path}
 				featured={blog.featured}
 				featuredImage={blog.featuredImage}
 				title={blog.title}
-				summary={blog.description}
+				description={blog.description}
 				date={getDate(blog.createdAt, blog.updatedAt)}
 			/>
 		{/each}
@@ -94,4 +91,12 @@
 </main>
 
 <style>
+	main {
+		padding: 1.25rem;
+	}
+
+	main div {
+		display: grid;
+		grid-gap: 0.5rem;
+	}
 </style>

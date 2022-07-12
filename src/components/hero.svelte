@@ -2,44 +2,144 @@
 	import Elclark from '$components/icons/elclark.svelte'
 </script>
 
-<div class="my-8">
-	<div
-		class="container mx-auto flex w-full flex-col-reverse items-center overflow-hidden p-5 md:flex-row"
-	>
-		<div class="my-16 md:mr-auto md:w-4/6">
-			<h1 class="mb-3 text-4xl font-semibold text-primary lg:mb-4 lg:text-5xl">
-				Hi, I'm <a
-					href="/about/"
-					class="rounded-sm underline transition-all duration-200 hover:bg-primary hover:px-2 hover:text-onPrimary hover:no-underline"
-					>Elclark</a
-				>, I'm a software engineer and designer.
+<div>
+	<div class="container hero">
+		<div class="first">
+			<h1>
+				Hi, I'm <a href="/about/">Elclark</a>, I'm a software engineer and designer.
 			</h1>
 			<p class="text-lg font-light leading-5 md:text-xl md:leading-6">
 				I also do system administration, and designing UI and UX. I'm still learning and trying new
 				things. I'm passionate about technology, science, music, and gaming.
 			</p>
 		</div>
-		<div class="flex h-full w-full items-center justify-center px-16 md:w-2/6 md:px-0 lg:p-6">
-			<div class="w-full text-primary">
-				<Elclark className="e-spin" />
+		<div class="second">
+			<div>
+				<Elclark className="spin glow" />
 			</div>
 		</div>
 	</div>
 </div>
 
 <style>
-	:global(.e-spin) {
-		filter: drop-shadow(0 0 0.5rem currentColor);
-		animation: rotate 12s infinite linear;
+	.hero {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		overflow: hidden;
+		padding: 1.25rem;
 	}
 
-	@media (min-width: 1024px) {
-		:global(.e-spin) {
-			filter: drop-shadow(0 0 0.75rem currentColor);
+	.first {
+		margin-top: 4rem;
+	}
+
+	h1 {
+		margin: 0;
+		margin-bottom: 0.75rem;
+		font-weight: var(--font-semibold);
+		color: var(--c-primary);
+	}
+
+	p {
+		font-size: 1rem;
+		line-height: 1.5rem;
+		margin: 0;
+	}
+
+	.second {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.second div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem;
+		width: 100%;
+		height: 100%;
+		color: var(--c-primary);
+	}
+
+	:global(.spin) {
+		animation: spin 15s linear infinite;
+	}
+
+	:global(.glow) {
+		filter: drop-shadow(0 0 0.75rem var(--c-primary));
+	}
+
+	a {
+		color: var(--c-primary);
+		text-decoration: underline;
+
+		transition: all 200ms ease;
+	}
+
+	a:hover {
+		background: var(--c-primary);
+		color: var(--c-on-primary);
+		text-decoration: none;
+		padding: 0 0.5rem;
+	}
+
+	@media (min-width: 640px) {
+		/* Nothing */
+	}
+
+	@media (min-width: 768px) {
+		.hero {
+			flex-direction: row;
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		.first {
+			width: 60%;
+			margin: 4rem 0;
+		}
+
+		p {
+			padding-right: 1rem;
+		}
+
+		.second {
+			width: 40%;
+		}
+
+		.second div {
+			padding: 1rem;
 		}
 	}
 
-	@keyframes rotate {
+	@media (min-width: 1024px) {
+		.first {
+			width: 66.666667%;
+		}
+
+		.second {
+			width: 33.333333%;
+		}
+		h1 {
+			font-size: 3rem;
+			line-height: 1;
+		}
+
+		p {
+			font-size: 1.25rem;
+			/* font-weight: var(--font-light); */
+			line-height: 1.75rem;
+		}
+
+		.second div {
+			padding: 0.5rem;
+		}
+	}
+
+	@keyframes spin {
 		from {
 			transform: rotate(0deg);
 		}

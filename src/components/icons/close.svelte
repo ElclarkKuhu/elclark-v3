@@ -1,14 +1,15 @@
 <script>
-	export let size = '3em'
+	export let size
+	export let className
 	export let width = size
 	export let height = size
 	export let color = 'currentColor'
 	export let viewBox = '0 0 48 48'
 </script>
 
-<svg {width} {height} {viewBox}>
+<svg {width} {height} {viewBox} class={className}>
 	<path
 		fill={color}
-		d="M12.45 37.65 10.35 35.55 21.9 24 10.35 12.45 12.45 10.35 24 21.9 35.55 10.35 37.65 12.45 26.1 24 37.65 35.55 35.55 37.65 24 26.1Z"
+		d="M24 26.8 13.85 36.95q-.6.6-1.4.6-.8 0-1.4-.6-.6-.6-.6-1.4 0-.8.6-1.4L21.2 24 11.05 13.85q-.6-.6-.6-1.4 0-.8.6-1.4.6-.6 1.4-.6.8 0 1.4.6L24 21.2l10.15-10.15q.6-.6 1.4-.6.8 0 1.4.6.6.6.6 1.4 0 .8-.6 1.4L26.8 24l10.15 10.15q.6.6.6 1.4 0 .8-.6 1.4-.6.6-1.4.6-.8 0-1.4-.6Z"
 	/>
 </svg>

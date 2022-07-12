@@ -9,8 +9,11 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 - v0.4.5 - 1/7/2022
 
+  - :art: Minor UI Changes
+  - :art: Styling improvements
   - :new: use [MDsveX](https://mdsvex.com/)
   - :new: redesign blog layout
+  - :zap: move [Vite](https://vitejs.dev/) config out of the sveltekit config
 
 - v0.4.4 - 25/06/2022
 
