@@ -7,7 +7,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 ## Changlogs
 
-- v0.4.5 - 1/7/2022
+- v0.4.5 - 13/7/2022
 
   - :art: Minor UI Changes
   - :art: Styling improvements
