@@ -25,7 +25,7 @@
 
 <svelte:head>
 	<!-- Metadata -->
-	<title>"Hi, I'm Elclark!"</title>
+	<title>Hi, I'm Elclark!</title>
 	<link rel="canonical" href="https://elclark.my.id/" />
 
 	<!-- Basic HTML Meta Tags -->
