@@ -2,7 +2,9 @@ import { expect, test } from '@playwright/test'
 
 test('Checking Index', async ({ page }) => {
 	await page.goto('/')
-	expect(await page.textContent('h1')).toBe("I'm Elclark, Student and software engineer.")
+	expect(await page.textContent('h1')).toBe(
+		"Hi, I'm Elclark, I'm a software engineer and designer."
+	)
 })
 
 test('Checking About', async ({ page }) => {
@@ -22,5 +24,5 @@ test('Checking Blog', async ({ page }) => {
 
 test('Checking Blog Post', async ({ page }) => {
 	await page.goto('/blog/welcome')
-	expect(await page.textContent('h1')).toBe('Welcome to my blog!')
+	expect(await page.textContent('h1')).toBe('Welcome to my blog! More to come...')
 })

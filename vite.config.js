@@ -10,6 +10,9 @@ const config = {
 			$stores: path.resolve('./src/stores'),
 			$data: path.resolve('./src/data')
 		}
+	},
+	preview: {
+		port: 3000
 	}
 }
 
