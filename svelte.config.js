@@ -16,10 +16,10 @@ export default {
 	kit: {
 		adapter: adapter(),
 		prerender: {
-			enabled: true,
-			default: true,
-			crawl: true,
-			onError: 'fail'
+			enabled: false,
+			default: false
+			// crawl: true,
+			// onError: 'fail'
 		}
 	}
 }
