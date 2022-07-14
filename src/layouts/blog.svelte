@@ -210,22 +210,20 @@
 	}
 
 	:global(article img) {
-		/* display: block; */
 		width: 100%;
-		/* max-width: 724px; */
-		/* margin: 0 auto; */
 	}
 
 	:global(article h2) {
-		font-size: 1.5rem;
-		line-height: 1.75rem;
+		font-size: 1.875rem;
 		font-weight: var(--font-semibold);
+		line-height: 2.25rem;
 		margin: var(--margin) 0;
 	}
 
 	:global(article h3) {
-		font-size: 1.125rem;
-		line-height: 1.75rem;
+		font-size: 1.5rem;
+		font-weight: var(--font-semibold);
+		line-height: 2rem;
 		margin: var(--margin) 0;
 	}
 
@@ -237,21 +235,15 @@
 
 	:global(article li) {
 		font-size: 1.125rem;
-		font-weight: var(--thin);
+		font-weight: var(--font-light);
 		margin: 0.35rem 0;
 	}
 
 	:global(article hr) {
 		opacity: 0.5;
 		margin: var(--margin) 0;
-		color: var(--color-outline);
-		border-color: var(--color-outline);
-	}
-
-	@media (min-width: 640px) {
-		main {
-			--margin: 20px;
-		}
+		color: rgba(var(--r-on-background), 0.15);
+		border-color: rgba(var(--r-on-background), 0.15);
 	}
 
 	@media (min-width: 768px) {
