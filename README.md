@@ -7,26 +7,30 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 ## Changlogs
 
+- v0.4.6 - 16/7/2022
+
+  - :sparkles: imporve SEO
+
 - v0.4.5 - 13/7/2022
 
   - :art: Minor UI Changes
   - :art: Styling improvements
-  - :new: use [MDsveX](https://mdsvex.com/)
-  - :new: redesign blog layout
+  - :sparkles: use [MDsveX](https://mdsvex.com/)
+  - :sparkles: redesign blog layout
   - :zap: move [Vite](https://vitejs.dev/) config out of the sveltekit config
 
 - v0.4.4 - 25/06/2022
 
-  - :new: feat: make file pages responsive
-  - :new: feat: add close button to mobile navigation
-  - :new: feat: animate close button
+  - :sparkles: feat: make file pages responsive
+  - :sparkles: feat: add close button to mobile navigation
+  - :sparkles: feat: animate close button
   - :art: style: move `/files/*` to `/file/*`
   - :bug: fix: invaild links in `/file/`
 
 - v0.4.3 - 24/06/2022
 
-  - :new: feat: update file pages
-  - :new: feat: only return nesessary data
+  - :sparkles: feat: update file pages
+  - :sparkles: feat: only return nesessary data
   - :bug: fix: navigation padding & margin
   - :bug: fix: return 404 when blog not found
   - :rotating_light: test: add test for blog
@@ -35,7 +39,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 - v0.4.2 - 19/06/2022
 
   - :art: style: reformat codes
-  - :new: feat: add all blog posts
+  - :sparkles: feat: add all blog posts
   - :rotating_light: test: add [@playwright/test](https://github.com/Microsoft/playwright)
   - :rotating_light: test: add tests
   - :recycle: chore: add [GitHub Actions](https://github.com/ElclarkCodes/Elclark/actions)
@@ -53,16 +57,16 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 - v0.4.1 - 19/06/2022
 
-  - :new: feat: Update Error Page.
-  - :new: feat: Update Blog title Margin.
+  - :sparkles: feat: Update Error Page.
+  - :sparkles: feat: Update Blog title Margin.
 
 - v0.4.0 - 19/06/2022
 
-  - :new: feat: UI Overhaul.
-  - :new: feat: Add blog.
-  - :new: feat: Add about.
-  - :new: feat: Add contact.
-  - :new: feat: Add changelog.
+  - :sparkles: feat: UI Overhaul.
+  - :sparkles: feat: Add blog.
+  - :sparkles: feat: Add about.
+  - :sparkles: feat: Add contact.
+  - :sparkles: feat: Add changelog.
   - :recycle: chore: Bug fixes & minor changes.
   - :x: Drop Contentful.
 
@@ -73,8 +77,8 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
   - :x: Removed `/logout`
   - :x: Dropped [aws-sdk](https://github.com/aws/aws-sdk-js)
   - :x: Dropped upload file
-  - :new: feat: Rewrite the backend code for `/files`
-  - :new: feat: Use [Contentful](https://www.contentful.com/) for content management
+  - :sparkles: feat: Rewrite the backend code for `/files`
+  - :sparkles: feat: Use [Contentful](https://www.contentful.com/) for content management
   - :recycle: chore: Manually Specify [@sveltejs/kit version](https://github.com/sveltejs/kit) (until it's released)
   - :recycle: chore: Manually Specify [@sveltejs/adapter-auto](https://github.com/sveltejs/kit/tree/master/packages/adapter-auto) version (until it's released)
   - :recycle: chore: Bump dependencies to latest versions
@@ -85,7 +89,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
   - :recycle: chore: Cleanup & Refactor Code.
   - :recycle: chore: Performance Improvements.
   - :recycle: chore: Move & Rewrite All endpoints to [ElclarkKuhu/Elclark-API](https://github.com/ElclarkKuhu/Elclark-API).
-  - :new: feat: Use [@sveltejs/adapter-auto](https://github.com/sveltejs/kit/tree/master/packages/adapter-auto).
+  - :sparkles: feat: Use [@sveltejs/adapter-auto](https://github.com/sveltejs/kit/tree/master/packages/adapter-auto).
 
 - v0.2.4 - 16/04/2022
 
@@ -96,6 +100,6 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
   - :recycle: chore: SEO Optimization
 
 - v0.2.2 - 15/04/2022
-  - :new: feat: Add Login with username and password
+  - :sparkles: feat: Add Login with username and password
   - :recycle: chore: Code optimizations
   - :recycle: chore: Minor Bug Fixes
