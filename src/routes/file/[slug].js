@@ -2,7 +2,7 @@ import files from '$data/files.json'
 import users from '$data/users.json'
 import filetype from '$data/filetype.json'
 
-export async function get({ params }) {
+export async function GET({ params }) {
 	const file = await files.find((file) => file.slug === params.slug)
 	if (!file) {
 		return {
