@@ -6,7 +6,7 @@
 	// export let featured = false
 
 	export let author = 'Elclark Kuhu'
-	export let authorImage = 'https://elclark.my.id/img/brand/elclark.svg'
+	export let authorImage = 'https://elclark.my.id/images/elclark.png'
 
 	export let title =
 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo provident reiciendis incidunt.'

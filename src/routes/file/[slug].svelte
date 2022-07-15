@@ -21,7 +21,7 @@
 
 	const title = `${file.name} - Elclark`
 	const description = file.description
-	const image = 'https://elclark.my.id/img/brand/elclark.png'
+	const image = 'https://elclark.my.id/images/elclark.png'
 </script>
 
 <svelte:head>

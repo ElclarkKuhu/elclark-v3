@@ -7,7 +7,7 @@
 
 	const title = 'Elclark Files'
 	const description = 'Find all files uploaded by Elclark'
-	const image = 'https://elclark.my.id/img/brand/elclark.png'
+	const image = 'https://elclark.my.id/images/elclark.png'
 </script>
 
 <svelte:head>

@@ -17,7 +17,7 @@
 		username: 'elclark',
 		firstName: 'Elclark',
 		lastName: 'Kuhu',
-		avatar: 'https://elclark.my.id/img/brand/elclark.png',
+		avatar: 'https://elclark.my.id/images/elclark.png',
 		bio: 'I\'m a software engineer and a writer. I\'m currently working at <a href="https://elclark.my.id">elclark.my.id</a>.',
 		website: 'https://elclark.my.id',
 		email: 'founder@elclark.my.id',
