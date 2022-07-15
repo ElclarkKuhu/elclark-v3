@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About Me
+description: Find out more about me and my work here
 ---
 
 I'm a software engineer and system administrator from Manado, Indonesia. I also a university

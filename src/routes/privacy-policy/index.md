@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Privacy Policy
+description: Read about our privacy policy here
 createdAt: 2022-07-01T09:30:16Z
 updatedAt: 2022-07-01T09:30:16Z
 ---

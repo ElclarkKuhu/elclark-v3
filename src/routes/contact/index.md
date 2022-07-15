@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Contact Me
+description: Find out how to contact me here
 ---
 
 Fell free to contact me at [mail@elclark.my.id](mailto:mail@elclark.my.id) or tweet me at a

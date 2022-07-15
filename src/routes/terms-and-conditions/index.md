@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Terms and Conditions
+description: Find out more about the terms and conditions here
 createdAt: 2022-07-01T09:30:16Z
 updatedAt: 2022-07-01T09:30:16Z
 ---

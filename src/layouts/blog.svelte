@@ -3,6 +3,8 @@
 	import { onDestroy } from 'svelte'
 	import formatDate from '$lib/formatDate'
 
+	import SEO from '$components/seo.svelte'
+
 	export let title = 'Untitled'
 	export let author = 'elclark'
 	export let createdAt
@@ -71,55 +73,18 @@
 	})
 </script>
 
-<svelte:head>
-	<!-- Metadata -->
-	<title>{title}</title>
-	<link rel="canonical" href={$page.url.href} />
-
-	<!-- Basic HTML Meta Tags -->
-	<meta
-		name="keywords"
-		content="Elclark, Code, software engineer, technology, programming, science, music, gaming"
-	/>
-	<meta name="description" content={description} />
-	<meta name="subject" content={title} />
-	<meta name="copyright" content="Elclark" />
-	<meta name="language" content="EN" />
-	<meta name="robots" content="index,follow" />
-	<meta name="author" content="Elclark, founder@elclark.my.id" />
-	<meta name="designer" content="Elclark, founder@elclark.my.id" />
-	<meta name="owner" content="Elclark" />
-	<meta name="url" content={$page.url.href} />
-	<meta name="identifier-URL" content={$page.url.origin} />
-	<meta name="category" content="technology, portfolio, blog, contact" />
-	<meta name="coverage" content="Worldwide" />
-	<meta name="distribution" content="Global" />
-	<meta name="rating" content="General" />
-
-	<!-- OpenGraph Meta Tags -->
-	<meta name="og:title" content={title} />
-	<meta name="og:type" content="article" />
-	<meta name="og:url" content={$page.url.href} />
-	<meta name="og:image" content={featuredImage} />
-	<meta name="og:site_name" content="Elclark" />
-	<meta name="og:description" content={description} />
-
-	<meta name="article:published_time" content={createdAt} />
-	<meta name="article:modified_time" content={updatedAt} />
-	<meta name="article:author" content="Elclark" />
-	<meta name="article:section" content="Technonlgy" />
-	<meta name="article:tag" content="Elclark, Technonlgy, Programming" />
-
-	<meta name="og:email" content="mail@elclark.my.id" />
-	<meta name="og:region" content="MDO" />
-	<meta name="og:country-name" content="ID" />
-
-	<!-- Twitter Metadata -->
-	<meta name="twitter:title" content={title} />
-	<meta name="twitter:description" content={description} />
-	<meta name="twitter:url" content={featuredImage} />
-	<meta name="twitter:card" content="summary" />
-</svelte:head>
+<SEO
+	type="article"
+	{title}
+	image={featuredImage}
+	{description}
+	path={$page.url.pathname}
+	publishedTime={createdAt}
+	modifiedTime={updatedAt}
+	authorName={`${author.firstName} ${author.lastName}`}
+	authorEmail={author.email}
+	twitterUsername={`@${author.twitter.username}`}
+/>
 
 <div>
 	<main class="container">
