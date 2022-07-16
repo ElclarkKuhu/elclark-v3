@@ -10,6 +10,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 - v0.4.6 - 16/7/2022
 
   - :sparkles: imporve SEO
+  - :sparkles: Update Files Layout
 
 - v0.4.5 - 13/7/2022
 

@@ -2,6 +2,7 @@
 	import moment from 'moment'
 	import { page } from '$app/stores'
 	import bytesToSize from '$lib/bytesToSize'
+	import formatDate from '$lib/formatDate'
 
 	export let files
 
@@ -10,73 +11,29 @@
 	const image = 'https://elclark.my.id/images/elclark.png'
 </script>
 
-<svelte:head>
-	<!-- Metadata -->
-	<title>{title}</title>
-	<link rel="canonical" href={$page.url.href} />
-
-	<!-- Basic HTML Meta Tags -->
-	<meta
-		name="keywords"
-		content="Elclark, Code, software engineer, technology, programming, science, music, gaming, files"
-	/>
-	<meta name="description" content={description} />
-	<meta name="subject" content={title} />
-	<meta name="copyright" content="Elclark" />
-	<meta name="language" content="EN" />
-	<meta name="robots" content="index,follow" />
-
-	<meta name="author" content="Elclark, founder@elclark.my.id" />
-	<meta name="designer" content="Elclark, founder@elclark.my.id" />
-	<meta name="owner" content="Elclark" />
-	<meta name="url" content={$page.url.href} />
-	<meta name="identifier-URL" content={$page.url.origin} />
-	<meta name="category" content="technology, portfolio, files" />
-	<meta name="coverage" content="Worldwide" />
-	<meta name="distribution" content="Global" />
-	<meta name="rating" content="General" />
-
-	<!-- OpenGraph Meta Tags -->
-	<meta name="og:title" content={title} />
-	<meta name="og:type" content="website" />
-	<meta name="og:url" content={$page.url.href} />
-	<meta name="og:image" content={image} />
-	<meta name="og:site_name" content="Elclark" />
-	<meta name="og:description" content={description} />
-
-	<meta name="og:email" content="mail@elclark.my.id" />
-	<meta name="og:region" content="MDO" />
-	<meta name="og:country-name" content="ID" />
-
-	<!-- Twitter Metadata -->
-	<meta name="twitter:title" content={title} />
-	<meta name="twitter:description" content={description} />
-	<meta name="twitter:url" content={image} />
-	<meta name="twitter:card" content="summary" />
-</svelte:head>
-
 <main>
-	{#each files as file}
-		<a href="/file/{file.slug}">
-			<h3>
-				{file.name}
-			</h3>
-			<p>
-				Uploaded {moment(file.createdAt).fromNow()} -
-				{#if file.updatedAt !== file.createdAt}
-					Updated {moment(file.updatedAt).fromNow()} -
-				{/if}
-				{bytesToSize(file.size)}
-			</p>
-		</a>
-	{/each}
+	<div class="container">
+		<h1>Files</h1>
+		{#each files as file}
+			<a href="/file{file.path}">
+				<h3>
+					{file.name}
+				</h3>
+				<p>
+					Uploaded <time datetime={file.createdAt}>{formatDate(file.createdAt)}</time> -
+					{#if file.updatedAt !== file.createdAt}
+						Updated <time datetime={file.createdAt}>{formatDate(file.updatedAt)}</time> -
+					{/if}
+					{bytesToSize(file.size)}
+				</p>
+			</a>
+		{/each}
+	</div>
 </main>
 
 <style>
-	main {
-		margin: var(--xxxlarge) auto;
-		padding: 0 var(--container-padding);
-		max-width: var(--max-width);
+	.container {
+		padding: 1.25rem;
 	}
 
 	a {
@@ -86,10 +43,10 @@
 
 		position: relative;
 
-		background: var(--color-tertiary);
-		color: var(--color-on-tertiary);
+		background: var(--c-tertiary);
+		color: var(--c-on-tertiary);
 
-		border-radius: var(--medium);
+		border-radius: 0.5rem;
 		overflow: hidden;
 	}
 
