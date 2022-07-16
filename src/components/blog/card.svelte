@@ -151,15 +151,17 @@
 			justify-content: space-between;
 		}
 
-		.post-info h2 {
-			font-size: 2.25rem;
-			line-height: 2.5rem;
-		}
-
 		.author-info {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.post-info h2 {
+			font-size: 2.25rem;
+			line-height: 2.5rem;
 		}
 	}
 </style>
