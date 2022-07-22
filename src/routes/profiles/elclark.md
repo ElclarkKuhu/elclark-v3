@@ -3,7 +3,7 @@ layout: profile
 username: elclark
 firstName: Elclark
 lastName: Kuhu
-title: Founder & CEO
+title: Founder & Owner
 # verified: true
 avatar: https://elclark.my.id/images/elclark.png
 # banner: https://elclark.my.id/images/profile/elclark-profile.png

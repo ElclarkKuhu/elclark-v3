@@ -84,7 +84,7 @@
 					</a>
 				{/if}
 				{#if youtube}
-					<a href={`https://www.youtube.com/c/${youtube}`}>
+					<a href={`https://www.youtube.com/channel/${youtube}`}>
 						<YouTube />
 					</a>
 				{/if}
@@ -100,6 +100,7 @@
 					<p>{title}</p>
 				</div>
 			</div>
+
 			<article>
 				<slot />
 			</article>
@@ -135,7 +136,7 @@
 					</a>
 				{/if}
 				{#if youtube}
-					<a href={`https://www.youtube.com/c/${youtube}`}>
+					<a href={`https://www.youtube.com/channel/${youtube}`}>
 						<YouTube />
 					</a>
 				{/if}
@@ -171,7 +172,7 @@
 	}
 
 	.profile {
-		--width: 16rem;
+		--width: 14rem;
 		width: var(--width);
 
 		margin: 0 auto;
@@ -324,6 +325,7 @@
 		}
 
 		.profile {
+			--width: 16rem;
 			margin-right: 2rem;
 			margin-bottom: 2rem;
 			margin-left: 2rem;
