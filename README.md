@@ -7,10 +7,13 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 ## Changlogs
 
-- v0.4.6 - 16/7/2022
+- v0.4.6 - 23/7/2022
 
   - :sparkles: imporve SEO
   - :sparkles: Update Files Layout
+  - :sparkles: Add Profiles
+  - :recycle: remove profile templates
+  - :art: UI: simplify author info on blog page
 
 - v0.4.5 - 13/7/2022
 
