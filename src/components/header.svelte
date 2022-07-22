@@ -57,7 +57,7 @@
 					<div class="close">
 						<Close size="2.25rem" />
 					</div>
-					<a href="/about">About</a>
+					<a href="/profiles/elclark">About</a>
 					<a href="https://paypal.me/elclarkkuhu">Support</a>
 					<a href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
 					<a href="/contact">Contact</a>
@@ -65,7 +65,7 @@
 			</div>
 		{:else}
 			<nav class="desktop">
-				<a href="/about">About</a>
+				<a href="/profiles/elclark">About</a>
 				<a href="https://paypal.me/elclarkkuhu">Support</a>
 				<a href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
 				<a href="/contact">Contact</a>
