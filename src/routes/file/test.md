@@ -2,7 +2,7 @@
 layout: files
 size: '256'
 name: 'test.zip'
-author: 'elclark'
+author: { slug: elclark, name: Elclark Kuhu, twitter: elclark_kuhu }
 directLink: 'https://cdn.elclark.my.id/files/test.zip/test.zip'
 description: 'This is a test file'
 createdAt: 2022-07-16T08:39:55Z

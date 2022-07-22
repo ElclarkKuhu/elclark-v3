@@ -10,44 +10,19 @@
 
 	export let size
 	export let name = 'Unknown'
-	export let author = 'elclark'
-	export let directLink
-	export let description
-	export let createdAt
-	export let updatedAt
-	export let thumbnail
-	export let filetype
-
-	// Until Author Profiles are implemented, this is the default author profile
-	author = {
+	export let author = {
 		username: 'elclark',
 		firstName: 'Elclark',
 		lastName: 'Kuhu',
 		avatar: 'https://elclark.my.id/images/elclark.png',
-		bio: 'I\'m a software engineer and a writer. I\'m currently working at <a href="https://elclark.my.id">elclark.my.id</a>.',
-		website: 'https://elclark.my.id',
-		email: 'founder@elclark.my.id',
-		twitter: {
-			username: 'elclark_kuhu',
-			url: 'https://twitter.com/elclark_kuhu'
-		},
-		github: {
-			username: 'ElclarkKuhu',
-			url: 'https://github.com/ElclarkKuhu'
-		},
-		instagram: {
-			username: 'elclark__',
-			url: 'https://instagram.com/elclark__'
-		},
-		linkedin: {
-			username: 'Elclark Kuhu',
-			url: 'https://www.linkedin.com/in/elclark-kuhu/'
-		},
-		youtube: {
-			username: 'Elclark',
-			url: 'https://www.youtube.com/c/ElclarkOfficial'
-		}
+		twitter: 'elclark_kuhu'
 	}
+	export let directLink
+	export let description
+	export let createdAt
+	export let updatedAt
+	// export let thumbnail
+	// export let filetype
 
 	let date = 'Unknown'
 	let utcDate = updatedAt || createdAt
@@ -209,6 +184,10 @@
 		line-height: 1.5rem;
 		font-weight: var(--font-light);
 		margin: var(--margin) 0;
+	}
+
+	:global(article strong) {
+		font-weight: var(--font-semibold);
 	}
 
 	:global(article li) {

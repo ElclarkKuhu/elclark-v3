@@ -109,6 +109,10 @@
 		margin: var(--margin) 0;
 	}
 
+	:global(article strong) {
+		font-weight: var(--font-semibold);
+	}
+
 	:global(article li) {
 		font-size: 1.125rem;
 		font-weight: var(--font-light);
