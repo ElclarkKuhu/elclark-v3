@@ -10,7 +10,8 @@ export default {
 			layout: {
 				blog: path.resolve('./src/layouts/blog.svelte'),
 				page: path.resolve('./src/layouts/page.svelte'),
-				files: path.resolve('./src/layouts/files.svelte')
+				files: path.resolve('./src/layouts/files.svelte'),
+				profile: path.resolve('./src/layouts/profile.svelte')
 			}
 		})
 	],
