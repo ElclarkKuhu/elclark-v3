@@ -1,10 +1,9 @@
 ---
 layout: blog
 
-category: blog
 title: Welcome to my blog! More to come...
 createdAt: 2022-07-04T00:00:00Z
-updatedAt: 2022-07-04T00:00:00Z
+# updatedAt: 2022-07-04T00:00:00Z
 
 description: Hi! This is the first post on my blog. This blog is all about technology and programming.
 featuredImage: https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
