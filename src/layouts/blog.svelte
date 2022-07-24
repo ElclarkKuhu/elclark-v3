@@ -22,25 +22,16 @@
 	let utcDate = updatedAt || createdAt
 	let dateLoop
 
-	if (createdAt) {
-		if (updatedAt) {
-			if (createdAt === updatedAt) {
-				date = formatDate(createdAt)
-				dateLoop = setInterval(() => {
-					date = formatDate(createdAt)
-				}, 1000)
-			} else {
-				date = 'Updated ' + formatDate(updatedAt)
-				dateLoop = setInterval(() => {
-					date = 'Updated ' + formatDate(updatedAt)
-				}, 1000)
-			}
-		} else {
+	if (updatedAt) {
+		date = 'Updated ' + formatDate(updatedAt)
+		dateLoop = setInterval(() => {
+			date = 'Updated ' + formatDate(updatedAt)
+		}, 1000)
+	} else if (createdAt) {
+		date = formatDate(createdAt)
+		dateLoop = setInterval(() => {
 			date = formatDate(createdAt)
-			dateLoop = setInterval(() => {
-				date = formatDate(createdAt)
-			}, 1000)
-		}
+		}, 1000)
 	}
 
 	onDestroy(() => {

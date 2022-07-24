@@ -8,16 +8,12 @@
 	export let blogs
 
 	function getDate(createdAt, updatedAt) {
+		if (updatedAt) {
+			return `Updated ${formatDate(updatedAt)}`
+		}
+
 		if (createdAt) {
-			if (updatedAt) {
-				if (createdAt === updatedAt) {
-					return formatDate(createdAt)
-				} else {
-					return 'Updated ' + formatDate(updatedAt)
-				}
-			} else {
-				return formatDate(createdAt)
-			}
+			return formatDate(createdAt)
 		} else {
 			return 'Unknown'
 		}
