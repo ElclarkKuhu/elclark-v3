@@ -1,6 +1,6 @@
 import path from 'path'
 import { mdsvex } from 'mdsvex'
-import adapter from '@sveltejs/adapter-auto'
+import adapter from '@sveltejs/adapter-static'
 
 export default {
 	extensions: ['.svelte', '.md', '.svx'],
@@ -16,7 +16,9 @@ export default {
 		})
 	],
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			out: '.svelte-kit/cloudflare'
+		}),
 		prerender: {
 			enabled: true,
 			default: true,
