@@ -19,16 +19,16 @@
 	<title>{status} {error}</title>
 </svelte:head>
 
-<main>
-	<h1>Something went wrong!</h1>
-	<p><code>{error} ({status})</code></p>
-	<a href="/">Go Home</a>
-</main>
+<div class="container">
+	<main>
+		<h1>Something went wrong!</h1>
+		<p><code>{error} ({status})</code></p>
+		<a href="/">Go Home</a>
+	</main>
+</div>
 
 <style>
 	main {
-		margin: var(--xxxlarge) auto 0 auto;
-		padding: 0 var(--container-padding);
-		max-width: var(--max-width);
+		padding: 1.25rem;
 	}
 </style>
