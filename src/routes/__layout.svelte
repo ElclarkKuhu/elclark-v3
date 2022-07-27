@@ -2,17 +2,27 @@
 	import Header from '$components/header.svelte'
 	import Footer from '$components/footer.svelte'
 
+	import { page } from '$app/stores'
 	import { fade } from 'svelte/transition'
 	import { beforeNavigate, afterNavigate } from '$app/navigation'
 
 	let loading = false
+	const appOrigin = $page.url.origin
 
-	beforeNavigate(() => {
-		loading = true
+	beforeNavigate(({ to }) => {
+		if (to) {
+			if (to.origin === appOrigin) {
+				loading = true
+			}
+		}
 	})
 
-	afterNavigate(() => {
-		loading = false
+	afterNavigate(({ to }) => {
+		if (to) {
+			if (to.origin === appOrigin) {
+				loading = false
+			}
+		}
 	})
 </script>
 
