@@ -7,14 +7,11 @@
 <div>
 	<footer class="container">
 		<div>
-			Made and Designed by <a sveltekit:prefetch href="/profiles/elclark">Elclark Kuhu</a>
-			.
+			Made and Designed by <a sveltekit:prefetch href="/profiles/elclark">Elclark Kuhu</a>.
 			<br />
 			Build using
-			<a href="https://kit.svelte.dev/">SvelteKit</a>
-			, Hosted And Protected By
-			<a href="https://cloudflare.com">CloudFlare</a>
-			.
+			<a href="https://kit.svelte.dev/">SvelteKit</a>, Hosted And Protected By
+			<a href="https://cloudflare.com">CloudFlare</a>.
 		</div>
 		<div>
 			<a href="https://twitter.com/elclark_kuhu/" aria-label="Twitter">
