@@ -11,7 +11,7 @@ const config = {
 		}
 	},
 	build: {
-		minify: false
+		minify: true
 	}
 }
 
