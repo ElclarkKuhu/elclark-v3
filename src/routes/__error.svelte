@@ -23,7 +23,7 @@
 	<main>
 		<h1>Something went wrong!</h1>
 		<p><code>{error} ({status})</code></p>
-		<a href="/">Go Home</a>
+		<a sveltekit:prefetch href="/">Go Home</a>
 	</main>
 </div>
 

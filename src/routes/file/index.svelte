@@ -15,7 +15,7 @@
 	<div class="container">
 		<h1>Files</h1>
 		{#each files as file}
-			<a href="/file{file.path}">
+			<a sveltekit:prefetch href="/file{file.path}">
 				<h3>
 					{file.name}
 				</h3>

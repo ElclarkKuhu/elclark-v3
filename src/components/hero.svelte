@@ -6,7 +6,8 @@
 	<div class="container hero">
 		<div class="first">
 			<h1>
-				Hi, I'm <a href="/profiles/elclark/">Elclark</a>, I'm a software engineer and designer.
+				Hi, I'm <a sveltekit:prefetch href="/profiles/elclark/">Elclark</a>, I'm a software engineer
+				and designer.
 			</h1>
 			<p class="text-lg font-light leading-5 md:text-xl md:leading-6">
 				I also do system administration, and designing UI and UX. I'm still learning and trying new

@@ -33,7 +33,7 @@
 <div class="sticky">
 	<div class="container header">
 		<div class="logo">
-			<a href="/">
+			<a sveltekit:prefetch href="/">
 				<div class="icon">
 					<Elclark size="2.25rem" />
 				</div>
@@ -57,18 +57,18 @@
 					<div class="close">
 						<Close size="2.25rem" />
 					</div>
-					<a href="/profiles/elclark">About</a>
-					<a href="https://paypal.me/elclarkkuhu">Support</a>
-					<a href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
-					<a href="/contact">Contact</a>
+					<a sveltekit:prefetch href="/profiles/elclark">About</a>
+					<a sveltekit:prefetch href="https://paypal.me/elclarkkuhu">Support</a>
+					<a sveltekit:prefetch href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
+					<a sveltekit:prefetch href="/contact">Contact</a>
 				</nav>
 			</div>
 		{:else}
 			<nav class="desktop">
-				<a href="/profiles/elclark">About</a>
-				<a href="https://paypal.me/elclarkkuhu">Support</a>
-				<a href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
-				<a href="/contact">Contact</a>
+				<a sveltekit:prefetch href="/profiles/elclark">About</a>
+				<a sveltekit:prefetch href="https://paypal.me/elclarkkuhu">Support</a>
+				<a sveltekit:prefetch href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
+				<a sveltekit:prefetch href="/contact">Contact</a>
 			</nav>
 		{/if}
 	</div>

@@ -15,7 +15,7 @@
 	export let featuredImage
 </script>
 
-<a {href}>
+<a sveltekit:prefetch {href}>
 	<div class="card">
 		{#if featuredImage}
 			<img src={featuredImage} alt={title} class="card-image" />

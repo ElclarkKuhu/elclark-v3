@@ -60,7 +60,7 @@
 
 			<div class="info">
 				<p>
-					By <a href="/profiles/{author.slug}">{author.name}</a>,
+					By <a sveltekit:prefetch href="/profiles/{author.slug}">{author.name}</a>,
 					<time datetime={utcDate}>{date}</time>
 				</p>
 			</div>

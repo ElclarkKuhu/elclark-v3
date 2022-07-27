@@ -7,22 +7,29 @@
 <div>
 	<footer class="container">
 		<div>
-			Made and Designed by <a href="/about" class="font-normal text-primary hover:underline"
-				>Elclark Kuhu</a
+			Made and Designed by <a
+				sveltekit:prefetch
+				href="/about"
+				class="font-normal text-primary hover:underline">Elclark Kuhu</a
 			>.
 			<br />
-			Build using <a href="https://kit.svelte.dev/" class="text-blue-400">SvelteKit</a>, Hosted And
-			Protected By
-			<a href="https://cloudflare.com" class="text-blue-400">CloudFlare</a>.
+			Build using
+			<a sveltekit:prefetch href="https://kit.svelte.dev/" class="text-blue-400">SvelteKit</a>,
+			Hosted And Protected By
+			<a sveltekit:prefetch href="https://cloudflare.com" class="text-blue-400">CloudFlare</a>.
 		</div>
 		<div class="grid w-max grid-cols-3 gap-2 pt-4 md:pt-0">
-			<a href="https://twitter.com/elclark_kuhu/" aria-label="Twitter">
+			<a sveltekit:prefetch href="https://twitter.com/elclark_kuhu/" aria-label="Twitter">
 				<Twitter size="2rem" />
 			</a>
-			<a href="https://github.com/ElclarkCodes/" aria-label="GitHub">
+			<a sveltekit:prefetch href="https://github.com/ElclarkCodes/" aria-label="GitHub">
 				<GitHub size="2rem" />
 			</a>
-			<a href="https://youtube.com/channel/UCfPwggPTrPAC3wyOVa7miAg" aria-label="YouTube">
+			<a
+				sveltekit:prefetch
+				href="https://youtube.com/channel/UCfPwggPTrPAC3wyOVa7miAg"
+				aria-label="YouTube"
+			>
 				<YouTube size="2rem" />
 			</a>
 		</div>
