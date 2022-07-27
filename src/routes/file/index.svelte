@@ -24,7 +24,7 @@
 					-
 					{#if file.updatedAt !== file.createdAt}
 						Updated <time datetime={file.createdAt}>{formatDate(file.updatedAt)}</time>
-						 -
+						-
 					{/if}
 					{bytesToSize(file.size)}
 				</p>
