@@ -9,6 +9,9 @@ const config = {
 			$components: path.resolve('./src/components'),
 			$stores: path.resolve('./src/stores')
 		}
+	},
+	build: {
+		minify: false
 	}
 }
 

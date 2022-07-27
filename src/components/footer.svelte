@@ -7,22 +7,16 @@
 <div>
 	<footer class="container">
 		<div>
-			Made and Designed by <a
-				sveltekit:prefetch
-				href="/about"
-				class="font-normal text-primary hover:underline"
-			>
-				Elclark Kuhu
-			</a>
+			Made and Designed by <a sveltekit:prefetch href="/about">Elclark Kuhu</a>
 			.
 			<br />
 			Build using
-			<a sveltekit:prefetch href="https://kit.svelte.dev/" class="text-blue-400">SvelteKit</a>
+			<a sveltekit:prefetch href="https://kit.svelte.dev/">SvelteKit</a>
 			, Hosted And Protected By
-			<a sveltekit:prefetch href="https://cloudflare.com" class="text-blue-400">CloudFlare</a>
+			<a sveltekit:prefetch href="https://cloudflare.com">CloudFlare</a>
 			.
 		</div>
-		<div class="grid w-max grid-cols-3 gap-2 pt-4 md:pt-0">
+		<div>
 			<a sveltekit:prefetch href="https://twitter.com/elclark_kuhu/" aria-label="Twitter">
 				<Twitter size="2rem" />
 			</a>
