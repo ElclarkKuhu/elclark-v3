@@ -58,16 +58,16 @@
 						<Close size="2.25rem" />
 					</div>
 					<a sveltekit:prefetch href="/profiles/elclark">About</a>
-					<a sveltekit:prefetch href="https://paypal.me/elclarkkuhu">Support</a>
-					<a sveltekit:prefetch href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
+					<a href="https://paypal.me/elclarkkuhu">Support</a>
+					<a href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
 					<a sveltekit:prefetch href="/contact">Contact</a>
 				</nav>
 			</div>
 		{:else}
 			<nav class="desktop">
 				<a sveltekit:prefetch href="/profiles/elclark">About</a>
-				<a sveltekit:prefetch href="https://paypal.me/elclarkkuhu">Support</a>
-				<a sveltekit:prefetch href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
+				<a href="https://paypal.me/elclarkkuhu">Support</a>
+				<a href="https://github.com/ElclarkCodes/Elclark#changlogs">Chages</a>
 				<a sveltekit:prefetch href="/contact">Contact</a>
 			</nav>
 		{/if}

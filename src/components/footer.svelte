@@ -11,23 +11,19 @@
 			.
 			<br />
 			Build using
-			<a sveltekit:prefetch href="https://kit.svelte.dev/">SvelteKit</a>
+			<a href="https://kit.svelte.dev/">SvelteKit</a>
 			, Hosted And Protected By
-			<a sveltekit:prefetch href="https://cloudflare.com">CloudFlare</a>
+			<a href="https://cloudflare.com">CloudFlare</a>
 			.
 		</div>
 		<div>
-			<a sveltekit:prefetch href="https://twitter.com/elclark_kuhu/" aria-label="Twitter">
+			<a href="https://twitter.com/elclark_kuhu/" aria-label="Twitter">
 				<Twitter size="2rem" />
 			</a>
-			<a sveltekit:prefetch href="https://github.com/ElclarkCodes/" aria-label="GitHub">
+			<a href="https://github.com/ElclarkCodes/" aria-label="GitHub">
 				<GitHub size="2rem" />
 			</a>
-			<a
-				sveltekit:prefetch
-				href="https://youtube.com/channel/UCfPwggPTrPAC3wyOVa7miAg"
-				aria-label="YouTube"
-			>
+			<a href="https://youtube.com/channel/UCfPwggPTrPAC3wyOVa7miAg" aria-label="YouTube">
 				<YouTube size="2rem" />
 			</a>
 		</div>
