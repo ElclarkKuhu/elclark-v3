@@ -5,6 +5,7 @@
 
 	import SEO from '$components/seo.svelte'
 
+	export let layout = 'blog'
 	export let title = 'Untitled'
 	export let author = {
 		username: 'elclark',
@@ -13,10 +14,14 @@
 		avatar: 'https://elclark.my.id/images/elclark.png',
 		twitter: 'elclark_kuhu'
 	}
-	export let createdAt
-	export let updatedAt
-	export let description
-	export let featuredImage
+	export let createdAt = undefined
+	export let updatedAt = undefined
+	export let description = undefined
+	export let featuredImage = undefined
+
+	if (layout !== 'blog') {
+		console.error(`Invalid layout: ${layout}`, '\n', 'Expected Layout: blog')
+	}
 
 	let date = 'Unknown'
 	let utcDate = updatedAt || createdAt

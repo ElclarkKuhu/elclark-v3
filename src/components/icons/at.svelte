@@ -1,6 +1,6 @@
 <script>
-	export let size
-	export let className
+	export let size = undefined
+	export let className = undefined
 	export let width = size
 	export let height = size
 	export let color = 'currentColor'

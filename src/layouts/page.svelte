@@ -4,11 +4,16 @@
 
 	import SEO from '$components/seo.svelte'
 
-	export let title
-	export let description
-	export let createdAt
-	export let updatedAt
-	export let featuredImage
+	export let layout = 'page'
+	export let title = undefined
+	export let description = undefined
+	export let createdAt = undefined
+	export let updatedAt = undefined
+	export let featuredImage = undefined
+
+	if (layout !== 'page') {
+		console.error(`Invalid layout: ${layout}`, '\n', 'Expected Layout: page')
+	}
 </script>
 
 <SEO

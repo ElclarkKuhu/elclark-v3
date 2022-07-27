@@ -28,7 +28,6 @@
 		{#each blogs as blog}
 			<Card
 				href={blog.path}
-				featured={blog.featured}
 				featuredImage={blog.featuredImage}
 				title={blog.title}
 				description={blog.description}

@@ -10,21 +10,27 @@
 	import YouTube from '$components/icons/youtube.svelte'
 	import Verified from '$components/icons/verified.svelte'
 
-	export let username
-	export let firstName
-	export let lastName
-	export let title
-	export let verified
-	export let avatar
-	export let banner
-	export let website
-	export let email
-	export let twitter
-	export let github
-	export let instagram
-	export let linkedin
-	export let youtube
-	// export let createdAt
+	export let layout = 'profile'
+	export let username = undefined
+	export let firstName = undefined
+	export let lastName = undefined
+	export let title = undefined
+	export let verified = undefined
+	export let avatar = undefined
+	export let banner = undefined
+	export let website = undefined
+	export let email = undefined
+	export let twitter = undefined
+	export let github = undefined
+	export let instagram = undefined
+	export let linkedin = undefined
+	export let youtube = undefined
+	export let createdAt = undefined
+
+	if (layout !== 'profile') {
+		console.error(`Invalid layout: ${layout}`, '\n', 'Expected Layout: profile')
+		console.log(createdAt)
+	}
 </script>
 
 <SEO

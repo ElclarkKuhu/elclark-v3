@@ -26,7 +26,7 @@
 
 	export let type = 'website'
 	export let title = "Hi, I'm Elclark"
-	export let image
+	export let image = undefined
 	export let description =
 		"Hi, I'm Elclark, I'm a software engineer and designer. I also do system administration, and designing UI and UX. I'm still learning and trying new things. I'm passionate about technology, science, music, and gaming."
 
@@ -38,8 +38,8 @@
 	export let categorys = []
 	categorys = categorys.concat(defaultCategorys)
 
-	export let publishedTime
-	export let modifiedTime
+	export let publishedTime = undefined
+	export let modifiedTime = undefined
 
 	export let authorName = 'Elclark Kuhu'
 	export let authorEmail = 'founder@elclark.my.id'

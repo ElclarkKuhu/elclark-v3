@@ -1,5 +1,5 @@
 <script>
-	export let date
+	export let date = undefined
 	export let href = '#'
 
 	// coming soon
@@ -12,7 +12,7 @@
 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo provident reiciendis incidunt.'
 	export let description =
 		'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere excepturi quo tenetur doloremque cumque aliquid.'
-	export let featuredImage
+	export let featuredImage = undefined
 </script>
 
 <a sveltekit:prefetch {href}>

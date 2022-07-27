@@ -8,7 +8,8 @@
 	import SEO from '$components/seo.svelte'
 	import File from '$components/icons/file.svelte'
 
-	export let size
+	export let layout = 'files'
+	export let size = undefined
 	export let name = 'Unknown'
 	export let author = {
 		username: 'elclark',
@@ -17,12 +18,18 @@
 		avatar: 'https://elclark.my.id/images/elclark.png',
 		twitter: 'elclark_kuhu'
 	}
-	export let directLink
-	export let description
-	export let createdAt
-	export let updatedAt
-	// export let thumbnail
-	// export let filetype
+	export let directLink = undefined
+	export let description = undefined
+	export let createdAt = undefined
+	export let updatedAt = undefined
+	export let thumbnail = undefined
+	export let filetype = undefined
+
+	if (layout !== 'files') {
+		console.error(`Invalid layout: ${layout}`, '\n', 'Expected Layout: files')
+		console.log(thumbnail)
+		console.log(filetype)
+	}
 
 	let date = 'Unknown'
 	let utcDate = updatedAt || createdAt
