@@ -16,14 +16,14 @@ export default {
 		})
 	],
 	kit: {
-		adapter: adapter({
-			out: '.svelte-kit/cloudflare'
-		}),
+		adapter: adapter(),
+		trailingSlash: 'always',
 		prerender: {
 			enabled: true,
 			default: true,
 			crawl: true,
-			onError: 'fail'
+			onError: 'fail',
+			origin: 'https://elclark.my.id'
 		}
 	}
 }
