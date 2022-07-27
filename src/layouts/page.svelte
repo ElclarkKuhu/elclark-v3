@@ -34,9 +34,13 @@
 			{#if createdAt || updatedAt}
 				<div class="date">
 					{#if updatedAt === createdAt}
-						<i>Published <time datetime={createdAt}>{moment(createdAt).format('LL')}</time></i>
+						<i>
+							Published <time datetime={createdAt}>{moment(createdAt).format('LL')}</time>
+						</i>
 					{:else}
-						<i>Updated at <time datetime={updatedAt}>{moment(updatedAt).format('LL')}</time></i>
+						<i>
+							Updated at <time datetime={updatedAt}>{moment(updatedAt).format('LL')}</time>
+						</i>
 					{/if}
 				</div>
 			{/if}

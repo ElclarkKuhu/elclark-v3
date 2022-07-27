@@ -63,7 +63,10 @@
 				</div>
 				<div class="info">
 					<h1>{name}</h1>
-					<p>{bytesToSize(size)} - <time datetime={utcDate}>{date}</time></p>
+					<p>
+						{bytesToSize(size)} -
+						<time datetime={utcDate}>{date}</time>
+					</p>
 				</div>
 			</div>
 

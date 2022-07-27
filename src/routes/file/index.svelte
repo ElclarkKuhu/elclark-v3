@@ -20,9 +20,11 @@
 					{file.name}
 				</h3>
 				<p>
-					Uploaded <time datetime={file.createdAt}>{formatDate(file.createdAt)}</time> -
+					Uploaded <time datetime={file.createdAt}>{formatDate(file.createdAt)}</time>
+					-
 					{#if file.updatedAt !== file.createdAt}
-						Updated <time datetime={file.createdAt}>{formatDate(file.updatedAt)}</time> -
+						Updated <time datetime={file.createdAt}>{formatDate(file.updatedAt)}</time>
+						 -
 					{/if}
 					{bytesToSize(file.size)}
 				</p>
