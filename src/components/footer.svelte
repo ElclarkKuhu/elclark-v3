@@ -7,7 +7,7 @@
 <div>
 	<footer class="container">
 		<div>
-			Made and Designed by <a sveltekit:prefetch href="/about">Elclark Kuhu</a>
+			Made and Designed by <a sveltekit:prefetch href="/profiles/elclark">Elclark Kuhu</a>
 			.
 			<br />
 			Build using
