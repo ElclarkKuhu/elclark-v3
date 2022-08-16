@@ -1,7 +1,7 @@
 import globToArray from '$lib/globToArray'
 import sort from '$lib/sortArray'
 
-export async function GET() {
+export async function load() {
 	const modules = import.meta.glob('./blog/*.md', { eager: true })
 	const array = await globToArray(modules).slice(0, 5)
 
@@ -14,8 +14,6 @@ export async function GET() {
 	})
 
 	return {
-		body: {
-			blogs: sort(blogs)
-		}
+		blogs: sort(blogs)
 	}
 }

@@ -1,21 +1,19 @@
 import globToArray from '$lib/globToArray'
 import sort from '$lib/sortArray'
 
-export async function GET() {
+export async function load() {
 	const modules = import.meta.glob('./*.md', { eager: true })
-	const array = await globToArray(modules)
+	const array = await globToArray(modules).slice(0, 5)
 
-	let blogs = []
+	let files = []
 	array.forEach((item) => {
-		blogs.push({
-			path: item.key.replace('./', '/blog/').slice(0, -3),
+		files.push({
+			path: item.key.replace('./', '/').slice(0, -3),
 			...item.metadata
 		})
 	})
 
 	return {
-		body: {
-			blogs: sort(blogs)
-		}
+		files: sort(files)
 	}
 }

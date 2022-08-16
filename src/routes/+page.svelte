@@ -5,7 +5,8 @@
 	import Card from '$components/blog/card.svelte'
 	import Hero from '$components/hero.svelte'
 
-	export let blogs
+	export let data
+	let blogs = data
 
 	function getDate(createdAt, updatedAt) {
 		if (updatedAt) {
