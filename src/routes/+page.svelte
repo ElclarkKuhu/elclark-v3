@@ -8,7 +8,7 @@
 
 	onMount(() => {
 		window.onload = () => {
-			height = window.innerHeight
+			height = window.innerHeight + 'px'
 		}
 
 		window.onresize = () => {
