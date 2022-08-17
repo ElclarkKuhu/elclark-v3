@@ -7,7 +7,10 @@
 	let height = undefined
 
 	onMount(() => {
-		height = window.innerHeight + 'px'
+		window.onload = () => {
+			height = window.innerHeight
+		}
+
 		window.onresize = () => {
 			height = window.innerHeight + 'px'
 		}
