@@ -2,25 +2,16 @@
 	import Meta from '$lib/components/meta.svelte'
 	import Elclark from '$lib/icons/elclark.svelte'
 
-	import { onMount } from 'svelte'
+	import Button from '$lib/components/button.svelte'
+	import Separator from '$lib/components/separator.svelte'
 
-	let height = undefined
-
-	onMount(() => {
-		window.onload = () => {
-			height = window.innerHeight + 'px'
-		}
-
-		window.onresize = () => {
-			height = window.innerHeight + 'px'
-		}
-	})
+	import Card from '$lib/components/card.svelte'
 </script>
 
 <Meta image="https://elclark.my.id/images/elclark.png" keywords={['landing', 'home', 'homepage']} />
 
 <div class="container">
-	<main style:height>
+	<main>
 		<div class="logo">
 			<Elclark />
 		</div>
@@ -31,10 +22,22 @@
 			new things. I'm passionate about technology, science, music, and gaming.
 		</p>
 
+		<Separator />
+
 		<div class="buttons">
-			<a href="/contact/" class="button tertiary">Contact Me</a>
+			<Button href="/contact/">Contact</Button>
+			<Button href="/socials/" color="filled-tonal">Socials</Button>
 		</div>
-		<a href="/links/" class="text-button">Socials</a>
+
+		<div class="cards">
+			<Card />
+			<Card />
+			<Card />
+			<Card />
+			<Card />
+			<Card />
+			<Card />
+		</div>
 	</main>
 </div>
 
@@ -47,12 +50,10 @@
 	}
 
 	main {
-		height: 100%;
-
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
+		justify-content: center;
 	}
 
 	.logo {
@@ -63,19 +64,32 @@
 		width: 15rem;
 		height: 15rem;
 		padding: 1.25rem;
+		margin: 1.25rem 0;
 
 		filter: drop-shadow(0 0 0.25rem var(--primary));
 
 		background-color: var(--primary);
 		color: var(--on-primary);
 
-		border-radius: 5%;
+		border-radius: 50%;
+	}
+
+	:global(.logo svg) {
+		filter: drop-shadow(0 0 0.2rem var(--on-primary));
+		animation: spin 15s infinite linear;
 	}
 
 	h1 {
 		font-size: 2rem;
-		margin: 0;
-		margin-top: 1rem;
+		margin: 1rem 0;
+	}
+
+	.about {
+		margin: 0.5rem 0;
+		text-align: center;
+		font-size: 1.125rem;
+		line-height: 1.2rem;
+		max-width: 25rem;
 	}
 
 	p {
@@ -83,58 +97,24 @@
 		margin: 0;
 	}
 
-	.text-button {
-		font-size: 1.12rem;
-		font-weight: 600;
-
-		padding: 0.5rem;
-		color: var(--tertiary);
-	}
-
 	.buttons {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		margin-top: 1.5rem;
+		margin: 1rem 0;
 	}
 
-	.button {
-		display: inline-block;
-
-		min-width: 10rem;
-		text-align: center;
-
-		margin: 0.15rem;
-		padding: 0.75rem 1.75rem;
-
-		border-radius: 2rem;
-
-		font-size: 1.2rem;
-		font-weight: 600;
-
-		background-color: transparent;
-		color: var(--primary);
+	.cards {
+		margin: 1rem 0;
 	}
 
-	.button:hover {
-		filter: drop-shadow(0 0 0.25rem var(--primary));
-	}
-
-	.button.tertiary {
-		background-color: var(--tertiary);
-		color: var(--on-tertiary);
-	}
-
-	.button.tertiary:hover {
-		filter: drop-shadow(0 0 0.25rem var(--tertiary));
-	}
-
-	.about {
-		margin-top: 1rem;
-		text-align: center;
-		font-size: 1.125rem;
-		line-height: 1.2rem;
-		max-width: 25rem;
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
 	}
 </style>

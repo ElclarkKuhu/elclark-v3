@@ -89,6 +89,9 @@ body {
 
 	position: relative;
 	/* overflow-y: scroll; */
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -117,6 +120,18 @@ a:hover {
 	margin: 0 auto;
 }
 
+.ripple {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+
+	border-radius: 50%;
+	background-color: rgba(var(--raw-on-background), 0.5);
+	transform: translate(-50%, -50%);
+	animation: scale 300ms ease-out;
+}
+
 @media (min-width: 640px) {
 	.container {
 		max-width: 640px;
@@ -132,5 +147,17 @@ a:hover {
 @media (min-width: 1024px) {
 	.container {
 		max-width: 1024px;
+	}
+}
+
+@keyframes scale {
+	0% {
+		width: 0;
+		height: 0;
+	}
+	100% {
+		width: 20rem;
+		height: 20rem;
+		opacity: 0;
 	}
 }
