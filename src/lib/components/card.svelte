@@ -3,10 +3,10 @@
 	import ripple from '$lib/ripple.js'
 
 	export let href = '/'
-	export let type = 'blog'
+	// export let type = 'blog'
 
 	export let image = 'https://elclark.my.id/images/elclark.png'
-	export let title = 'This Website Is Under Construction!'
+	export let title = 'This website is currently under construction!'
 	export let author = 'Elclark Kuhu'
 	export let date = '2022-08-20T21:27:47Z'
 
@@ -25,7 +25,8 @@
 	<div>
 		<h2>{title}</h2>
 		<p>
-			{author} - {formatDate(date)}
+			<span>{author}</span> &bullet;
+			{formatDate(date)}
 		</p>
 	</div>
 </a>
@@ -41,18 +42,18 @@
 
 		position: relative;
 		padding: 0.25rem;
-		margin: 0.25rem 0;
-		max-width: 25rem;
+		margin: 0.5rem 0;
+		max-width: 30rem;
 
 		color: currentColor;
-		background-color: rgba(var(--raw-on-background), 0.1);
+		/* background-color: rgba(var(--raw-on-background), 0.1); */
 
 		transition: background-color 200ms ease;
 	}
 
 	a:hover {
 		filter: none;
-		background-color: rgba(var(--raw-primary), 0.2);
+		background-color: rgba(var(--raw-primary), 0.1);
 	}
 
 	img {
@@ -78,8 +79,10 @@
 	h2 {
 		font-size: 1.25rem;
 		font-weight: 500;
-		line-height: 1.55rem;
+		line-height: 1.25rem;
+
 		margin: 0;
+		margin-top: 0.25rem;
 	}
 
 	p {
@@ -89,11 +92,16 @@
 
 		padding: 0.25rem 1rem;
 		margin: 0;
-		margin-bottom: 0.5rem;
+		margin-top: 0.25rem;
+		margin-bottom: 0.25rem;
 
 		border-radius: 1rem;
 
 		background-color: rgba(var(--raw-on-background), 0.1);
+	}
+
+	span {
+		font-weight: 500;
 	}
 
 	@keyframes scale {

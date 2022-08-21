@@ -31,12 +31,10 @@
 
 		<div class="cards">
 			<Card />
-			<Card />
-			<Card />
-			<Card />
-			<Card />
-			<Card />
-			<Card />
+			<Card
+				title="Lorem ipsum dolor sit amet, Excepturi assumenda sequi nemo accusantium odit? Sequi way more nemo cumque?"
+				image="https://elclark.my.id/images/profile/elclark-profile.png"
+			/>
 		</div>
 	</main>
 </div>

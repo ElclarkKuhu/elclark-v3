@@ -13,6 +13,7 @@
 
 		color: var(--primary);
 	}
+
 	.line {
 		width: 2.5rem;
 		height: 2px;
