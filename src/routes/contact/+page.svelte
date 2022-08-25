@@ -5,15 +5,13 @@
 	import Button from '$components/button.svelte'
 
 	import Badge from './badge.svelte'
-
-	import Email from '$icons/email.svelte'
 </script>
 
 <Meta
 	path={$page.url.pathname}
 	title="Elclark - Contact"
 	image="https://elclark.my.id/images/elclark.png"
-	keywords={['contact', 'email', 'message']}
+	keywords={['contact', 'email', 'message', 'telegram', 'whatsapp', 'discord']}
 />
 
 <div class="container">
@@ -31,6 +29,7 @@
 			<Button href="https://api.whatsapp.com/send?phone=6282195446833" color="filled-tonal"
 				>WhatsApp</Button
 			>
+			<!-- TODO: add discord -->
 		</div>
 	</main>
 </div>

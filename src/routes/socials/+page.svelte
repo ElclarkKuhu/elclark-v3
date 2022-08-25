@@ -1,6 +1,14 @@
 <script>
+	import Meta from '$components/meta.svelte'
 	import Badge from '../contact/Badge.svelte'
 </script>
+
+<Meta
+	path={$page.url.pathname}
+	title="Elclark - Social Media"
+	image="https://elclark.my.id/images/elclark.png"
+	keywords={['social', 'media', 'socials', 'instagram', 'facebook', 'twitter', 'youtube', 'twitch']}
+/>
 
 <div class="container">
 	<main>
