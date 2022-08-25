@@ -1,6 +1,7 @@
 <script>
 	import ripple from '$lib/ripple.js'
 
+	export let icon = undefined
 	export let href = undefined
 	export let color = 'filled' // filled, filled tonal, outlined, and text buttons
 </script>
@@ -12,6 +13,11 @@
 	on:mousedown={ripple}
 	on:click
 >
+	{#if icon}
+		<span>
+			<svelte:component this={icon} />
+		</span>
+	{/if}
 	<slot />
 </svelte:element>
 
@@ -20,11 +26,13 @@
 		--bg: var(--primary);
 		--on-bg: var(--on-primary);
 
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
 		font: inherit;
 		border: none;
-
-		display: inline-block;
-		position: relative;
 
 		min-width: 10rem;
 		text-align: center;
@@ -43,6 +51,14 @@
 		overflow: hidden;
 
 		transition: opacity 100ms ease-out;
+	}
+
+	span {
+		display: inline-block;
+		width: 1.3rem;
+		height: 1.3rem;
+
+		margin-right: 0.4rem;
 	}
 
 	.button:hover {

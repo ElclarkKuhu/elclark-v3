@@ -6,7 +6,7 @@
 	// export let type = 'blog'
 
 	export let image = 'https://elclark.my.id/images/elclark.png'
-	export let title = 'This website is currently under construction!'
+	export let title = 'This website is currently still under construction, why?'
 	export let author = 'Elclark Kuhu'
 	export let date = '2022-08-20T21:27:47Z'
 
@@ -57,8 +57,8 @@
 	}
 
 	img {
-		width: 6rem;
-		height: 6rem;
+		width: 5rem;
+		height: 5rem;
 		border-radius: 0.5rem;
 		object-fit: cover;
 
@@ -102,6 +102,13 @@
 
 	span {
 		font-weight: 500;
+	}
+
+	@media (min-width: 640px) {
+		img {
+			width: 6rem;
+			height: 6rem;
+		}
 	}
 
 	@keyframes scale {

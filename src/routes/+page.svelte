@@ -1,21 +1,18 @@
 <script>
-	import Meta from '$lib/components/meta.svelte'
-	import Elclark from '$lib/icons/elclark.svelte'
+	import Meta from '$components/meta.svelte'
+	import Badge from './badge.svelte'
 
-	import Button from '$lib/components/button.svelte'
-	import Separator from '$lib/components/separator.svelte'
+	import Button from '$components/button.svelte'
+	import Separator from '$components/separator.svelte'
 
-	import Card from '$lib/components/card.svelte'
+	import Card from '$components/card.svelte'
 </script>
 
 <Meta image="https://elclark.my.id/images/elclark.png" keywords={['landing', 'home', 'homepage']} />
 
 <div class="container">
 	<main>
-		<div class="logo">
-			<Elclark />
-		</div>
-		<h1>Elclark Kuhu</h1>
+		<Badge />
 
 		<p class="about">
 			I'm a Software Engineer, UI/UX designer and system administration. I love learning and trying
@@ -31,10 +28,6 @@
 
 		<div class="cards">
 			<Card />
-			<Card
-				title="Lorem ipsum dolor sit amet, Excepturi assumenda sequi nemo accusantium odit? Sequi way more nemo cumque?"
-				image="https://elclark.my.id/images/profile/elclark-profile.png"
-			/>
 		</div>
 	</main>
 </div>
@@ -52,34 +45,6 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-	}
-
-	.logo {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		width: 15rem;
-		height: 15rem;
-		padding: 1.25rem;
-		margin: 1.25rem 0;
-
-		filter: drop-shadow(0 0 0.25rem var(--primary));
-
-		background-color: var(--primary);
-		color: var(--on-primary);
-
-		border-radius: 50%;
-	}
-
-	:global(.logo svg) {
-		filter: drop-shadow(0 0 0.2rem var(--on-primary));
-		animation: spin 15s infinite linear;
-	}
-
-	h1 {
-		font-size: 2rem;
-		margin: 0.5rem 0;
 	}
 
 	.about {
@@ -105,14 +70,5 @@
 
 	.cards {
 		margin: 1rem 0;
-	}
-
-	@keyframes spin {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(360deg);
-		}
 	}
 </style>
