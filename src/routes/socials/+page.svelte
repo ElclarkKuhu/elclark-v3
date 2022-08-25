@@ -1,6 +1,8 @@
 <script>
 	import Meta from '$components/meta.svelte'
 	import Badge from '../contact/Badge.svelte'
+
+	import { page } from '$app/stores'
 </script>
 
 <Meta
