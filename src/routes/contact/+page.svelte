@@ -53,7 +53,7 @@
 		text-align: center;
 		font-size: 1.125rem;
 		line-height: 1.2rem;
-		max-width: 25rem;
+		padding: 0 1rem;
 	}
 
 	.buttons {

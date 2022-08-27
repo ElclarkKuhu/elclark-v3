@@ -17,6 +17,7 @@
 		height: 15rem;
 		padding: 1.25rem;
 		margin: 1.25rem 0;
+		margin-top: 2.5rem;
 
 		filter: drop-shadow(0 0 0.25rem var(--primary));
 

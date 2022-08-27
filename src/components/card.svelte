@@ -43,7 +43,6 @@
 		position: relative;
 		padding: 0.25rem;
 		margin: 0.5rem 0;
-		max-width: 30rem;
 
 		color: currentColor;
 		/* background-color: rgba(var(--raw-on-background), 0.1); */
@@ -59,7 +58,7 @@
 	img {
 		width: 5rem;
 		height: 5rem;
-		border-radius: 0.5rem;
+		border-radius: 0.4rem;
 		object-fit: cover;
 
 		pointer-events: none;
@@ -104,7 +103,7 @@
 		font-weight: 500;
 	}
 
-	@media (min-width: 640px) {
+	@media (min-width: 480px) {
 		img {
 			width: 6rem;
 			height: 6rem;

@@ -15,8 +15,8 @@
 		<Badge />
 
 		<p class="about">
-			I'm a Software Engineer, UI/UX designer and system administration. I love learning and trying
-			new things. I'm passionate about technology, science, music, and gaming.
+			I'm a Software Engineer, UI/UX designer and System administration. I love learning and trying
+			new things. I'm also passionate about technology, science, music, and gaming.
 		</p>
 
 		<Separator />
@@ -33,13 +33,6 @@
 </div>
 
 <style>
-	.container {
-		width: 100%;
-		height: 100%;
-
-		padding: 1rem;
-	}
-
 	main {
 		display: flex;
 		flex-direction: column;
@@ -52,7 +45,8 @@
 		text-align: center;
 		font-size: 1.125rem;
 		line-height: 1.2rem;
-		max-width: 25rem;
+
+		padding: 0 1.5rem;
 	}
 
 	p {
@@ -62,9 +56,9 @@
 
 	.buttons {
 		display: flex;
-		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: center;
-		align-items: center;
+		max-width: 21rem;
 		margin: 0.5rem 0;
 	}
 

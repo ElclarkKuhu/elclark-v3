@@ -118,6 +118,7 @@ a:hover {
 .container {
 	max-width: auto;
 	margin: 0 auto;
+	padding: 0 1rem;
 }
 
 .ripple {
@@ -132,29 +133,36 @@ a:hover {
 	animation: scale 300ms ease-out;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
+	.container {
+		max-width: 480px;
+	}
+}
+
+/* @media (min-width: 640px) {
 	.container {
 		max-width: 640px;
 	}
-}
+} */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 	.container {
 		max-width: 768px;
 	}
-}
+} */
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
 	.container {
 		max-width: 1024px;
 	}
-}
+} */
 
 @keyframes scale {
 	0% {
 		width: 0;
 		height: 0;
 	}
+
 	100% {
 		width: 20rem;
 		height: 20rem;
