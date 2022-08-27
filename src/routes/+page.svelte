@@ -1,6 +1,6 @@
 <script>
 	import Meta from '$components/meta.svelte'
-	import Badge from './badge.svelte'
+	import Badge from './Badge.svelte'
 
 	import Button from '$components/button.svelte'
 	import Separator from '$components/separator.svelte'

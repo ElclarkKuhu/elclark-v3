@@ -4,7 +4,7 @@
 	import Meta from '$components/meta.svelte'
 	import Button from '$components/button.svelte'
 
-	import Badge from './badge.svelte'
+	import Badge from './Badge.svelte'
 </script>
 
 <Meta
