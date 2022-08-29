@@ -2,7 +2,7 @@
 	import dayjs from 'dayjs'
 	import ripple from '$lib/ripple.js'
 
-	export let href = '/'
+	export let href = '/blog/why-rebuild-again'
 	// export let type = 'blog'
 
 	export let image = 'https://elclark.my.id/images/elclark.png'
