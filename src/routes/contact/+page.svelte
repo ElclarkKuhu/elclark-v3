@@ -4,7 +4,7 @@
 	import Meta from '$components/meta.svelte'
 	import Button from '$components/button.svelte'
 
-	import Badge from './badge.svelte'
+	import Badge from '$components/badge.svelte'
 </script>
 
 <Meta
@@ -17,8 +17,8 @@
 <div class="container">
 	<main>
 		<Badge />
-
 		<h1>Contact Me</h1>
+
 		<p class="about">
 			If you have any questions or want to get in touch, please feel free to contact me. I will get
 			back to you as soon as possible. Thanks for your interest!
