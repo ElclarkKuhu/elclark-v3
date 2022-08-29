@@ -25,10 +25,12 @@
 		</p>
 
 		<div class="buttons">
-			<Button href="mailto:founder@elclark.my.id">Email</Button>
-			<Button href="https://t.me/elclark" color="filled-tonal">Telegram</Button>
-			<Button href="https://api.whatsapp.com/send?phone=6282195446833" color="filled-tonal"
-				>WhatsApp</Button
+			<Button href="mailto:founder@elclark.my.id" target="_blank">Email</Button>
+			<Button href="https://t.me/elclark" color="filled-tonal" target="_blank">Telegram</Button>
+			<Button
+				href="https://api.whatsapp.com/send?phone=6282195446833"
+				color="filled-tonal"
+				target="_blank">WhatsApp</Button
 			>
 			<!-- TODO: add discord -->
 		</div>

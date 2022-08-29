@@ -2,11 +2,17 @@
 	import Elclark from '$icons/elclark.svelte'
 </script>
 
-<div class="logo">
-	<Elclark />
-</div>
+<a href="/">
+	<div class="logo">
+		<Elclark />
+	</div>
+</a>
 
 <style>
+	a {
+		display: block;
+	}
+
 	.logo {
 		display: flex;
 		align-items: center;

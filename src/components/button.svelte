@@ -3,15 +3,17 @@
 
 	export let icon = undefined
 	export let href = undefined
-	export let color = 'filled' // filled, filled tonal, outlined, and text buttons
+	export let color = 'filled' // filled, filled-tonal, outlined, and text buttons
+
+	export let target = undefined
 </script>
 
 <svelte:element
 	this={href ? 'a' : 'button'}
 	{href}
+	{target}
 	class="button {color}"
-	on:mousedown={ripple}
-	on:click
+	on:click={ripple}
 >
 	{#if icon}
 		<span>
@@ -34,6 +36,7 @@
 		font: inherit;
 		border: none;
 
+		width: max-content;
 		min-width: 10rem;
 		text-align: center;
 
@@ -76,10 +79,21 @@
 		--on-bg: var(--primary);
 
 		border: 1px solid var(--on-bg);
+		transition: opacity 100ms ease-out, background-color 100ms ease-out;
+	}
+
+	.button.outlined:hover {
+		--bg: rgba(var(--raw-primary), 0.2);
 	}
 
 	.button.text {
 		background-color: transparent;
 		color: var(--primary);
+
+		transition: opacity 100ms ease-out, background-color 100ms ease-out;
+	}
+
+	.button.text:hover {
+		background-color: rgba(var(--raw-primary), 0.2);
 	}
 </style>
