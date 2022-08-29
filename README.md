@@ -9,7 +9,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 - v0.5.0 - 29/08/2022
 
-  - :art: a Full redesign of the [Website](https://elclark.my.id).
+  - :art: a full redesign of the [Website](https://elclark.my.id).
   - :rocket: Refactoring to the [SvelteKit](https://kit.svelte.dev/) breaking changes.
 
 - v0.4.6 - 23/07/2022
