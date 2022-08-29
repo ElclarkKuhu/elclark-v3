@@ -1,6 +1,6 @@
 <script>
 	import Meta from '$components/meta.svelte'
-	import Badge from '../contact/Badge.svelte'
+	import Badge from './../contact/badge.svelte'
 
 	import { page } from '$app/stores'
 </script>

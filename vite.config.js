@@ -1,11 +1,10 @@
 import path from 'path'
 
 import { sveltekit } from '@sveltejs/kit/vite'
-import { imagetools } from 'vite-imagetools'
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	plugins: [sveltekit(), imagetools()],
+	plugins: [sveltekit()],
 	build: {
 		minify: true
 	},
