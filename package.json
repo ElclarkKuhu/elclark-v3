@@ -1,22 +1,20 @@
 {
 	"name": "elclark",
 	"author": "Elclark <mail@elclark.my.id>",
-	"version": "0.4.6",
+	"version": "0.5.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
-		"prepare": "svelte-kit sync",
 		"test": "playwright test",
 		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. .",
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.24.1",
-		"@sveltejs/adapter-static": "^1.0.0-next.38",
-		"@sveltejs/kit": "1.0.0-next.396",
-		"mdsvex": "^0.10.6",
+		"@playwright/test": "^1.25.1",
+		"@sveltejs/adapter-cloudflare": "^1.0.0-next.32",
+		"@sveltejs/kit": "1.0.0-next.445",
 		"prettier": "^2.7.1",
 		"prettier-plugin-svelte": "^2.7.0",
 		"svelte": "^3.49.0"
@@ -24,6 +22,6 @@
 	"type": "module",
 	"license": "GPL-3.0-or-later",
 	"dependencies": {
-		"moment": "^2.29.4"
+		"dayjs": "^1.11.5"
 	}
 }

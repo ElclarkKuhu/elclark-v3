@@ -7,7 +7,12 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
 
 ## Changlogs
 
-- v0.4.6 - 23/7/2022
+- v0.5.0 - 29/08/2022
+
+  - :art: a full redesign of the [Website](https://elclark.my.id).
+  - :rocket: Refactoring to the [SvelteKit](https://kit.svelte.dev/) breaking changes.
+
+- v0.4.6 - 23/07/2022
 
   - :sparkles: imporve SEO
   - :sparkles: Update Files Layout
@@ -15,7 +20,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
   - :recycle: remove profile templates
   - :art: UI: simplify author info on blog page
 
-- v0.4.5 - 13/7/2022
+- v0.4.5 - 13/07/2022
 
   - :art: Minor UI Changes
   - :art: Styling improvements
@@ -83,7 +88,7 @@ This is my personal website build using [SvelteKit](https://kit.svelte.dev/).
   - :x: Dropped upload file
   - :sparkles: feat: Rewrite the backend code for `/files`
   - :sparkles: feat: Use [Contentful](https://www.contentful.com/) for content management
-  - :recycle: chore: Manually Specify [@sveltejs/kit version](https://github.com/sveltejs/kit) (until it's released)
+  - :recycle: chore: Manually Specify [@sveltejs/kit](https://github.com/sveltejs/kit) version (until v1.0)
   - :recycle: chore: Manually Specify [@sveltejs/adapter-auto](https://github.com/sveltejs/kit/tree/master/packages/adapter-auto) version (until it's released)
   - :recycle: chore: Bump dependencies to latest versions
   - :recycle: chore: Minor SEO & UX changes

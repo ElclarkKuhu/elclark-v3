@@ -25,7 +25,7 @@
 	const defaultCategorys = ['technology', 'science', 'portfolio']
 
 	export let type = 'website'
-	export let title = "Hi, I'm Elclark"
+	export let title = 'Elclark'
 	export let image = undefined
 	export let description =
 		"Hi, I'm Elclark, I'm a software engineer and designer. I also do system administration, and designing UI and UX. I'm still learning and trying new things. I'm passionate about technology, science, music, and gaming."
@@ -47,7 +47,7 @@
 	export let twitterUsername = '@elclark_kuhu'
 </script>
 
-<!-- <SEO
+<!-- <Meta
 	type=""
 	title=""
 	image=""
