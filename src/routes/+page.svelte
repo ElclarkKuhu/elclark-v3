@@ -22,8 +22,8 @@
 		<Separator />
 
 		<div class="buttons">
-			<Button href="/contact/">Contact</Button>
-			<Button href="/socials/" color="filled-tonal">Socials</Button>
+			<Button href="contact">Contact</Button>
+			<Button href="socials" color="filled-tonal">Socials</Button>
 		</div>
 
 		<div class="cards">
