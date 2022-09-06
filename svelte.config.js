@@ -3,7 +3,7 @@ import adapter from '@sveltejs/adapter-cloudflare'
 export default {
 	kit: {
 		adapter: adapter(),
-		trailingSlash: 'always',
+		// trailingSlash: 'always',
 		prerender: {
 			enabled: true,
 			default: true,
