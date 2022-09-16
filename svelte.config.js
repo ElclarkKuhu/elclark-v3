@@ -5,10 +5,9 @@ export default {
 		adapter: adapter(),
 		// trailingSlash: 'always',
 		prerender: {
-			enabled: true,
-			default: true,
+			concurrency: 1,
 			crawl: true,
-			onError: 'fail',
+			enabled: true,
 			origin: 'https://elclark.my.id'
 		}
 	}
