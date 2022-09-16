@@ -24,6 +24,7 @@
 	<main>
 		<Badge />
 		<h1>Social Media</h1>
+		<p class="about">Here are my social media accounts. Feel free to follow me on any of them.</p>
 
 		<div class="links">
 			<a href="https://twitter.com/elclark_kuhu" target="_blank" style:--clr="0, 172, 238">
@@ -72,6 +73,14 @@
 		font-size: 2rem;
 		font-weight: 500;
 		margin: 0.5rem 0;
+	}
+
+	.about {
+		margin: 0.5rem 0;
+		text-align: center;
+		font-size: 1.125rem;
+		line-height: 1.2rem;
+		padding: 0 1rem;
 	}
 
 	.links {
