@@ -21,9 +21,7 @@
 		width: 10rem;
 		height: 10rem;
 		padding: 1.25rem;
-		margin: 0;
-		margin-top: 3.5rem;
-		margin-bottom: 0.5rem;
+		margin: 0.5rem auto;
 
 		filter: drop-shadow(0 0 0.25rem var(--primary));
 

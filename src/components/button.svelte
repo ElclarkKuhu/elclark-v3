@@ -5,13 +5,18 @@
 	export let href = undefined
 	export let color = 'filled' // filled, filled-tonal, outlined, and text buttons
 
+	export let type = undefined
+	export let width = undefined
 	export let target = undefined
 </script>
 
 <svelte:element
 	this={href ? 'a' : 'button'}
 	{href}
+	{type}
 	{target}
+	style:width
+	on:click
 	class="button {color}"
 	on:click={ripple}
 >
@@ -45,7 +50,7 @@
 
 		border-radius: 2rem;
 
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 		font-weight: 500;
 
 		color: var(--on-bg);
