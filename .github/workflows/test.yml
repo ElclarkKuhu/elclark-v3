@@ -23,12 +23,16 @@ jobs:
         with:
           version: 6.0.2
 
-      - name: Runing Test using Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
 
+      - name: Install dependencies
       - run: pnpm install --frozen-lockfile
-      - run: npx playwright install
-      - run: pnpm test
+
+      - name: Install playwright
+        run: npx playwright install
+
+      - name: Runing Test using Node.js ${{ matrix.node-version }}
+        run: pnpm test
