@@ -102,20 +102,6 @@
 	}
 
 	function deleteImage(image) {
-		// fetch(`https://image.elclark.my.id/${image}`, {
-		// 	method: 'DELETE',
-		// 	headers: {
-		// 		Authorization: `Bearer ${API_KEY}`
-		// 	}
-		// }).then((res) => {
-		// 	if (res.ok) {
-		// 		alert('Image deleted')
-		// 		images = images.filter((i) => i !== image)
-		// 		localStorage.setItem('images', JSON.stringify(images))
-		// 	} else {
-		// 		alert('Failed to delete image')
-		// 	}
-		// })
 		toast.promise(
 			fetch(`https://image.elclark.my.id/${image}`, {
 				method: 'DELETE',
@@ -259,6 +245,7 @@
 		font-size: 1rem;
 
 		margin: 0;
+		width: 100%;
 		padding: 0.75rem;
 		margin-bottom: 0.25rem;
 
