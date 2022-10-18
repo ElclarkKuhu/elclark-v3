@@ -19,20 +19,13 @@ jobs:
         node-version: [16.x]
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2.2.2
-        with:
-          version: 6.0.2
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Install playwright
-        run: npx playwright install
 
       - name: Runing Test using Node.js ${{ matrix.node-version }}
-        run: pnpm test
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - run: npm ci
+      - run: npx playwright install
+      - run: npm test
