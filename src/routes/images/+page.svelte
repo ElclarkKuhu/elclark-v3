@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte'
 	import { slide } from 'svelte/transition'
 
+	// import jimp from 'jimp'
 	import toast, { Toaster } from 'svelte-french-toast'
 
 	import Badge from '$components/badge.svelte'
@@ -61,6 +62,29 @@
 						error: 'Could Not Upload!'
 					}
 				)
+
+				// jimp.read(files[0]).then((image) => {
+				// 	image
+				// 		.resize(256, 256)
+				// 		.quality(60)
+				// 		.getBuffer(image.getMIME(), (err, buffer) => {
+				// 			if (err) {
+				// 				console.error(err)
+				// 			} else {
+				// 				fetch('https://image.elclark.my.id/', {
+				// 					method: 'PUT',
+				// 					body: buffer,
+				// 					headers: {
+				// 						Authorization: `Bearer ${API_KEY}`,
+				// 						'Content-Type': image.getMIME(),
+				// 						'Content-Length': buffer.length,
+				// 						'X-Object-Key': `${slug}-256.${imageExtensions[image.getMIME()]}`,
+				// 						'X-Object-Public': isPublic ? 'true' : 'false'
+				// 					}
+				// 				})
+				// 			}
+				// 		})
+				// })
 			} else {
 				toast.error('File type not supported', {
 					style: 'border-radius: 200px; background: #333; color: #fff;'
@@ -172,7 +196,11 @@
 					<div class="image" transition:slide>
 						<img src={`https://image.elclark.my.id/${image}`} alt={image} />
 						<div>
-							<a href={`https://image.elclark.my.id/${image}`} target="_blank">{image}</a>
+							<a
+								href={`https://image.elclark.my.id/${image}`}
+								target="_blank"
+								rel="noopener noreferrer">{image}</a
+							>
 							<button
 								on:click={() => {
 									deleteImage(image)

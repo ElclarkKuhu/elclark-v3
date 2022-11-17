@@ -27,19 +27,34 @@
 		<p class="about">Here are my social media accounts. Feel free to follow me on any of them.</p>
 
 		<div class="links">
-			<a href="https://twitter.com/elclark_kuhu" target="_blank" style:--clr="0, 172, 238">
+			<a
+				href="https://twitter.com/elclark_kuhu"
+				target="_blank"
+				rel="noopener noreferrer"
+				style:--clr="0, 172, 238"
+			>
 				<span>
 					<Twitter size="1.25rem" color="#00acee" />
 				</span>
 				Twitter
 			</a>
-			<a href="https://www.facebook.com/elclark/" target="_blank" style:--clr="66, 103, 178">
+			<a
+				href="https://www.facebook.com/elclark/"
+				target="_blank"
+				rel="noopener noreferrer"
+				style:--clr="66, 103, 178"
+			>
 				<span>
 					<Facebook size="1.25rem" color="#4267B2" />
 				</span>
 				Facebook
 			</a>
-			<a href="https://www.instagram.com/elclark__/" target="_blank" style:--clr="131, 58, 180">
+			<a
+				href="https://www.instagram.com/elclark__/"
+				target="_blank"
+				rel="noopener noreferrer"
+				style:--clr="131, 58, 180"
+			>
 				<span>
 					<Instagram size="1.25rem" color="#833AB4" />
 				</span>
@@ -48,6 +63,7 @@
 			<a
 				href="https://www.linkedin.com/in/elclark-kuhu/"
 				target="_blank"
+				rel="noopener noreferrer"
 				style:--clr="14, 118, 168"
 			>
 				<span>

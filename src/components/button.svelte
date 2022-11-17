@@ -15,10 +15,11 @@
 	{href}
 	{type}
 	{target}
+	rel={target === '_blank' ? 'noopener noreferrer' : undefined}
 	style:width
 	on:click
+	on:keydown={ripple}
 	class="button {color}"
-	on:click={ripple}
 >
 	{#if icon}
 		<span>
