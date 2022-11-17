@@ -18,7 +18,7 @@
 	rel={target === '_blank' ? 'noopener noreferrer' : undefined}
 	style:width
 	on:click
-	on:keydown={ripple}
+	on:mousedown={ripple}
 	class="button {color}"
 >
 	{#if icon}
